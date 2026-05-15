@@ -1,0 +1,306 @@
+'use client'
+import React, { useEffect, useState } from 'react';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { FiCheckCircle, FiClock, FiMail, FiMapPin, FiPhone, FiSend } from 'react-icons/fi';
+import { withAssetVersion } from '@/lib/asset';
+import { useAppDispatch, useAppSelector } from '@/store/hooks';
+import { RootState } from '../../store';
+import { clearError, fetchContactInfo, sendContactMessage } from '../../store/slices/contactSlice';
+
+interface ContactForm {
+  name: string;
+  phone: string;
+  email: string;
+  serviceType: string;
+  urgency: string;
+  message: string;
+}
+
+const ContactPage = () => {
+  const [formData, setFormData] = useState<ContactForm>({
+    name: '',
+    phone: '',
+    email: '',
+    serviceType: '',
+    urgency: 'normal',
+    message: '',
+  });
+  const [success, setSuccess] = useState(false);
+
+  const dispatch = useAppDispatch();
+  const { isSending, error } = useAppSelector((state: RootState) => state.contact) as {
+    isSending: boolean;
+    error: string | null;
+  };
+
+  useEffect(() => {
+    dispatch(fetchContactInfo());
+    dispatch(clearError());
+  }, [dispatch]);
+
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setSuccess(false);
+
+    if (!formData.name || !formData.phone || !formData.email || !formData.serviceType || !formData.message) {
+      return;
+    }
+
+    try {
+      const messageData = {
+        ...formData,
+        subject: `${formData.serviceType} - ${formData.urgency}`,
+        priority:
+          formData.urgency === 'cok-acil'
+            ? ('high' as const)
+            : formData.urgency === 'acil'
+              ? ('medium' as const)
+              : ('low' as const),
+      };
+
+      await dispatch(sendContactMessage(messageData)).unwrap();
+
+      setFormData({
+        name: '',
+        phone: '',
+        email: '',
+        serviceType: '',
+        urgency: 'normal',
+        message: '',
+      });
+
+      setSuccess(true);
+      setTimeout(() => setSuccess(false), 5000);
+    } catch (err) {
+      console.error('Mesaj gönderilirken hata:', err);
+    }
+  };
+
+  return (
+    <main className="page-flow min-h-screen bg-[#fcf7f2] text-[#2a211c]">
+      <section className="relative flex min-h-[500px] items-center overflow-hidden">
+        <div className="absolute inset-0">
+          <Image
+            src={withAssetVersion('/iletisim/hero.png')}
+            alt="Bloom2GO İletişim"
+            fill
+            priority
+            className="object-cover object-center"
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-[rgba(42,33,28,0.55)] mix-blend-multiply" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[rgba(247,147,30,0.3)] via-[rgba(42,33,28,0.25)] to-transparent" />
+        </div>
+
+        <div className="relative z-10 mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-10">
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="max-w-3xl"
+          >
+            <div className="mb-5 inline-block rounded-full bg-[#f7931e] px-5 py-2 text-[10px] font-bold uppercase tracking-[0.25em] text-white shadow-xl shadow-black/15">
+              İletişime Geçin
+            </div>
+
+            <h1 className="font-serif text-[clamp(2.4rem,5vw,4.8rem)] leading-[1.02] tracking-[-0.04em] text-white">
+              Operasyonlarınızı <br />
+              <span className="text-[#ffd39e]">Birlikte Dönüştürelim</span>
+            </h1>
+
+            <p className="mt-8 max-w-2xl text-lg leading-relaxed text-white/90">
+              Mağazanızın ihtiyaçlarını, şube yapınızı ve hedeflerinizi dinleyelim; size en uygun Bloom2GO kurgusunu birlikte şekillendirelim.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="py-24 bg-[#fcf7f2]">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="grid grid-cols-1 gap-16 lg:grid-cols-12 lg:gap-24">
+            
+            <div className="lg:col-span-7">
+              <motion.div
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="bg-white border border-[rgba(42,33,28,0.06)] rounded-[40px] p-8 sm:p-12 shadow-xl"
+              >
+                <h2 className="font-serif text-3xl text-[#2a211c] mb-3">İletişim Formu</h2>
+                <p className="text-base text-[#7a5c49] mb-10">Sorularınız veya demo talepleriniz için formu doldurabilirsiniz.</p>
+
+                {success && (
+                  <motion.div 
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    className="mb-10 flex items-center gap-4 rounded-2xl bg-emerald-50 border border-emerald-100 p-5 text-emerald-700"
+                  >
+                    <FiCheckCircle className="h-6 w-6" />
+                    <p className="text-sm font-bold uppercase tracking-wider">Mesajınız başarıyla iletildi.</p>
+                  </motion.div>
+                )}
+
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                    <div className="space-y-2">
+                      <label className="text-[11px] font-bold uppercase tracking-[0.15em] text-[#a56f47] ml-1">Ad Soyad</label>
+                      <input
+                        type="text"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-6 py-4 bg-[#fcf7f2] border border-[rgba(42,33,28,0.08)] rounded-2xl focus:outline-none focus:border-[#f7931e] focus:ring-2 focus:ring-[#f7931e]/10 text-base transition-all"
+                        placeholder="İsminiz"
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <label className="text-[11px] font-bold uppercase tracking-[0.15em] text-[#a56f47] ml-1">Telefon</label>
+                      <input
+                        type="tel"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-6 py-4 bg-[#fcf7f2] border border-[rgba(42,33,28,0.08)] rounded-2xl focus:outline-none focus:border-[#f7931e] focus:ring-2 focus:ring-[#f7931e]/10 text-base transition-all"
+                        placeholder="05xx xxx xx xx"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="space-y-2">
+                    <label className="text-[11px] font-bold uppercase tracking-[0.15em] text-[#a56f47] ml-1">E-posta</label>
+                    <input
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full px-6 py-4 bg-[#fcf7f2] border border-[rgba(42,33,28,0.08)] rounded-2xl focus:outline-none focus:border-[#f7931e] focus:ring-2 focus:ring-[#f7931e]/10 text-base transition-all"
+                      placeholder="e-posta@adresiniz.com"
+                    />
+                  </div>
+
+                  <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                    <div className="space-y-2">
+                      <label className="text-[11px] font-bold uppercase tracking-[0.15em] text-[#a56f47] ml-1">İlgi Alanı</label>
+                      <select
+                        name="serviceType"
+                        value={formData.serviceType}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-6 py-4 bg-[#fcf7f2] border border-[rgba(42,33,28,0.08)] rounded-2xl focus:outline-none focus:border-[#f7931e] focus:ring-2 focus:ring-[#f7931e]/10 text-base transition-all appearance-none cursor-pointer"
+                      >
+                        <option value="">Seçiniz</option>
+                        <option value="siparis-yonetimi">Sipariş Yönetimi</option>
+                        <option value="hazirlik-akisi">Hazırlık Akışı (Florist)</option>
+                        <option value="stok-takibi">Taze Stok Takibi</option>
+                        <option value="kurye-teslimat">Kurye ve Teslimat</option>
+                        <option value="sube-merkezi">Çoklu Şube Yönetimi</option>
+                        <option value="demo-talebi">Demo Talebi</option>
+                        <option value="diger">Diğer</option>
+                      </select>
+                    </div>
+                    <div className="space-y-2">
+                      <label className="text-[11px] font-bold uppercase tracking-[0.15em] text-[#a56f47] ml-1">Aciliyet</label>
+                      <select
+                        name="urgency"
+                        value={formData.urgency}
+                        onChange={handleInputChange}
+                        className="w-full px-6 py-4 bg-[#fcf7f2] border border-[rgba(42,33,28,0.08)] rounded-2xl focus:outline-none focus:border-[#f7931e] focus:ring-2 focus:ring-[#f7931e]/10 text-base transition-all appearance-none cursor-pointer"
+                      >
+                        <option value="normal">Normal</option>
+                        <option value="acil">Acil</option>
+                        <option value="cok-acil">Çok Acil</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div className="space-y-2">
+                    <label className="text-[11px] font-bold uppercase tracking-[0.15em] text-[#a56f47] ml-1">Mesajınız</label>
+                    <textarea
+                      name="message"
+                      value={formData.message}
+                      onChange={handleInputChange}
+                      rows={4}
+                      required
+                      className="w-full px-6 py-4 bg-[#fcf7f2] border border-[rgba(42,33,28,0.08)] rounded-2xl focus:outline-none focus:border-[#f7931e] focus:ring-2 focus:ring-[#f7931e]/10 text-base transition-all resize-none"
+                      placeholder="İhtiyaçlarınızı veya sorularınızı buraya yazabilirsiniz."
+                    />
+                  </div>
+
+                  <button
+                    type="submit"
+                    disabled={isSending}
+                    className="w-full flex items-center justify-center gap-3 bg-[#f7931e] text-white py-5 rounded-2xl font-bold text-xs tracking-[0.2em] hover:bg-[#f57c00] transition-all shadow-xl active:scale-95 disabled:bg-gray-300"
+                  >
+                    {isSending ? 'GÖNDERİLİYOR...' : (
+                      <>
+                        <FiSend className="w-4 h-4" />
+                        MESAJI GÖNDER
+                      </>
+                    )}
+                  </button>
+                </form>
+              </motion.div>
+            </div>
+
+            <div className="lg:col-span-5 space-y-12">
+              <div className="space-y-10">
+                {[
+                  { icon: FiPhone, title: 'Telefon', value: '+90 (212) xxx xx xx', sub: 'Destek Hattı' },
+                  { icon: FiMail, title: 'E-posta', value: 'hello@bloom2go.com', sub: 'Bilgi ve Teklif' },
+                  { icon: FiMapPin, title: 'Merkez', value: 'Levent, İstanbul', sub: 'Teknoloji Ofisimiz' },
+                  { icon: FiClock, title: 'Destek Saatleri', value: '09:00 - 19:00', sub: 'Haftanın her günü' },
+                ].map((item) => (
+                  <motion.div 
+                    key={item.title} 
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    className="flex items-start gap-6 group"
+                  >
+                    <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-white border border-[rgba(42,33,28,0.06)] text-[#f7931e] shadow-sm transition-all group-hover:scale-110 group-hover:bg-[#f7931e] group-hover:text-white group-hover:shadow-lg">
+                      <item.icon className="h-6 w-6" />
+                    </div>
+                    <div>
+                      <h4 className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#a56f47]">{item.title}</h4>
+                      <p className="mt-1 text-xl font-bold text-[#2a211c]">{item.value}</p>
+                      <p className="mt-1 text-sm text-[#8a6448]">{item.sub}</p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+
+              <div className="overflow-hidden rounded-[40px] border border-[rgba(42,33,28,0.06)] shadow-xl">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3007.8288591873!2d29.0125439!3d41.0772421!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab666270e5b77%3A0xc3f94a1d48c0a876!2sLevent%2C%20Be%C5%9fikta%C5%9F%2F%C4%B0stanbul!5e0!3m2!1str!2str!4v1715783676704!5m2!1str!2str"
+                  width="100%"
+                  height="380"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  title="Bloom2GO Ofis Konumu"
+                  className="grayscale hover:grayscale-0 transition-all duration-700"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  );
+};
+
+export default ContactPage;
