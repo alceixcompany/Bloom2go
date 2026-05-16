@@ -72,13 +72,13 @@ const NewsPreview = () => {
         <div className="mb-16 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="max-w-2xl">
             <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[var(--lale-emerald-soft)]">
-              Bloom2GO Journal
+              Bloom2GO Rehberi
             </p>
             <h2 className="mt-5 font-serif text-4xl text-[var(--lale-anthracite)] sm:text-5xl">
-              Sektör Notları ve Operasyon İpuçları
+              Çiçek Seçimi ve Hediye Anları İçin İlhamlar
             </h2>
             <p className="mt-5 text-base leading-8 text-[var(--lale-emerald-soft)] sm:text-lg">
-              Çiçek satışı, stok döngüsü, teslimat verimliliği ve müşterinin tekrar sipariş vermesini etkileyen detaylar.
+              Hangi anda hangi çiçek seçilir, son dakika jestleri nasıl şık hale gelir ve buket seçerken nelere dikkat edilir gibi pratik içerikler.
             </p>
           </div>
 
@@ -86,7 +86,7 @@ const NewsPreview = () => {
             href="/haberler"
             className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.16em] text-[var(--lale-gold)] transition-colors hover:opacity-80"
           >
-            Tüm Notları Gör
+            Tüm İçerikleri Gör
             <FiArrowRight className="h-4 w-4" />
           </Link>
         </div>
@@ -112,13 +112,13 @@ const NewsPreview = () => {
 
               <div className="flex flex-1 flex-col p-7">
                 <div className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[var(--lale-gold)]">
-                  {item.tags?.[0] || 'OPERASYON'}
+                  {item.tags?.[0] || 'ILHAM'}
                 </div>
                 <h3 className="mt-4 font-serif text-2xl leading-tight text-[var(--lale-anthracite)] transition-colors group-hover:text-[var(--lale-gold)]">
                   {item.title}
                 </h3>
                 <p className="mt-4 line-clamp-3 text-sm leading-7 text-[var(--lale-emerald-soft)]">
-                  {item.description || 'Çiçek operasyonlarını daha hızlı ve daha görünür yönetmek için kısa notlar.'}
+                  {item.description || 'Doğru buketi seçmek ve hediye anlarını daha etkileyici hale getirmek için kısa öneriler.'}
                 </p>
 
                 <Link

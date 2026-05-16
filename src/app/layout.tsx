@@ -24,17 +24,18 @@ const dancingScript = Dancing_Script({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.bloom2go.com"),
-  title: "Bloom2GO | Çiçekçilik Operasyon Sistemi",
-  description: "Bloom2GO ile çiçek sipariş yönetimi, florist hazırlık akışı ve stok kontrol süreçlerinizi dijitalleştirin.",
+  title: "Bloom2GO | 7/24 Akıllı Çiçek Otomatı",
+  description: "Bloom2GO ile taze çiçek buketlerine günün her saatinde, merkezi konumlarda ve temassız ödeme kolaylığıyla ulaşın.",
   keywords: [
     "bloom2go",
-    "çiçekçi otomasyonu",
-    "çiçek sipariş yönetimi",
-    "florist hazırlık sistemi",
-    "çiçek stok takibi",
-    "çiçekçilik yazılımı",
-    "kurye yönetimi",
-    "mağaza operasyon sistemi"
+    "çiçek otomatı",
+    "akıllı çiçek otomatı",
+    "7/24 çiçek",
+    "taze çiçek buketi",
+    "otomat konumları",
+    "temassız çiçek alışverişi",
+    "havalimanında çiçek",
+    "avm çiçek otomatı"
   ].join(", "),
   authors: [{ name: "Bloom2GO" }],
   creator: "Bloom2GO",
@@ -61,8 +62,8 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: "Bloom2GO | Çiçekçilik İçin Akıllı Operasyon Sistemi",
-    description: "Siparişten teslimata kadar tüm çiçek operasyonlarınızı tek panelden yönetin.",
+    title: "Bloom2GO | 7/24 Akıllı Çiçek Otomatı",
+    description: "Taze çiçek buketlerine günün her saatinde, hızlı ödeme ve merkezi konum avantajıyla ulaşın.",
     type: "website",
     locale: "tr_TR",
     siteName: "Bloom2GO",
@@ -79,7 +80,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Bloom2GO",
-    description: "Çiçekçilik operasyonlarınız için akıllı otomasyon çözümleri.",
+    description: "7/24 taze çiçek buketlerine akıllı otomat deneyimiyle ulaşın.",
     images: ['/hero_main.png']
   },
 };

@@ -2,37 +2,37 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { FiArrowUpRight, FiBox, FiGrid, FiMapPin, FiPackage, FiShoppingBag } from 'react-icons/fi';
+import { FiArrowUpRight, FiClock, FiHeart, FiMapPin, FiShield, FiWind } from 'react-icons/fi';
 
 const services = [
   {
-    icon: FiShoppingBag,
-    title: 'Sipariş Akışı',
-    description: 'Web sitesi, pazaryeri ve mağaza siparişlerini tek ekranda toplayın.',
+    icon: FiClock,
+    title: 'Son Dakika Çözümü',
+    description: 'Doğum günü, ziyaret ya da kutlama öncesi beklemeden dakikalar içinde buketinizi alın.',
     accent: 'bg-[var(--lale-anthracite)] text-[var(--lale-ivory)]',
   },
   {
-    icon: FiPackage,
-    title: 'Florist Hazırlık',
-    description: 'Hazırlanacak buketleri sıra, not ve teslim saatine göre yönetin.',
+    icon: FiWind,
+    title: 'Korunan Tazelik',
+    description: 'Özel iklimlendirme sistemi sayesinde çiçekler gün boyu canlılığını ve formunu korur.',
     accent: 'bg-[var(--lale-gold)] text-[var(--lale-anthracite)]',
   },
   {
-    icon: FiBox,
-    title: 'Taze Stok Kontrolü',
-    description: 'Çiçek bazlı kritik seviye uyarıyla kayıpları azaltın.',
+    icon: FiMapPin,
+    title: 'Merkezi Konumlar',
+    description: 'AVM, havalimanı ve yoğun geçiş noktalarındaki konumlarla çiçeğe ulaşmak zahmetsizleşir.',
     accent: 'bg-white text-[var(--lale-anthracite)]',
   },
   {
-    icon: FiMapPin,
-    title: 'Kurye ve Teslimat',
-    description: 'Rota, teslimat bölgesi ve canlı durum bilgisini anlık izleyin.',
+    icon: FiShield,
+    title: 'Temassız ve Güvenli',
+    description: 'Kolay ödeme adımlarıyla hızlı, pratik ve güvenli bir alışveriş deneyimi yaşarsınız.',
     accent: 'bg-[#f7ede5] text-[var(--lale-anthracite)]',
   },
   {
-    icon: FiGrid,
-    title: 'Şube Yönetimi',
-    description: 'Birden fazla mağazayı tek panelden görünür ve dengeli yönetin.',
+    icon: FiHeart,
+    title: 'Duyguyu Geciktirmez',
+    description: 'Planlı olmasanız bile içten bir jesti ertelemeden aynı anda hayata geçirmenizi sağlar.',
     accent: 'bg-[#efe4d8] text-[var(--lale-anthracite)]',
   },
 ];
@@ -46,26 +46,26 @@ const Services = () => {
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <div className="lg:sticky lg:top-28">
             <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[var(--lale-emerald-soft)]">
-              Bloom2GO Modülleri
+              Bloom2GO Deneyimi
             </p>
             <h2 className="mt-5 max-w-xl font-serif text-[40px] leading-[0.95] text-[var(--lale-anthracite)] sm:text-[54px] lg:text-[68px]">
-              Günün akışına uyan sade operasyon ekranları
+              Neden çiçeği bir otomat deneyiminden almak mantıklı?
             </h2>
             <p className="mt-6 max-w-lg text-base leading-8 text-[var(--lale-emerald-soft)] sm:text-lg">
-              Her ekranı floristlerin, mağazanın ve kuryenin gerçek günlük kullanımına göre tasarlandı.
-              Daha az karmaşa, daha hızlı aksiyon.
+              Bloom2GO yalnızca bir satış noktası değil; hız, tazelik ve erişilebilirliği bir araya getiren
+              yeni nesil bir çiçek alma alışkanlığıdır.
             </p>
 
             <div className="mt-10 flex flex-wrap gap-4">
-              <Link href="/iletisim" className="lale-gold-button gap-3">
-                Demo Planla
+              <Link href="/hizmet-bolgelerimiz" className="lale-gold-button gap-3">
+                Otomat Konumları
                 <FiArrowUpRight className="h-4 w-4" />
               </Link>
               <Link
                 href="/hizmetlerimiz"
                 className="inline-flex items-center justify-center rounded-full border border-[rgba(143,98,64,0.18)] px-7 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-[var(--lale-anthracite)] transition-all duration-300 hover:bg-white/80"
               >
-                Tüm Modüller
+                Hizmet Detayları
               </Link>
             </div>
           </div>

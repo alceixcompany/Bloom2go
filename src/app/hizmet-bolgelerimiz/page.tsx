@@ -132,13 +132,13 @@ const ServiceAreasPage = () => {
         
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
           <div className="inline-flex items-center gap-3 border border-[#f7931e]/40 px-5 py-2 text-[10px] font-bold uppercase tracking-[0.25em] text-[#f7931e] rounded-full mb-8">
-            OPERASYONEL ERİŞİM
+            OTOMAT ERİŞİMİ
           </div>
           <h1 className="text-5xl md:text-7xl font-serif mb-8 leading-tight">
             Aktif <span className="text-[#f7931e]">Hizmet Bölgeleri</span>
           </h1>
           <p className="text-xl md:text-2xl text-[rgba(252,247,242,0.8)] max-w-2xl mx-auto leading-relaxed">
-            Türkiye genelinde seçkin çiçekçiler ve çiçek atölyeleri operasyonlarını Bloom2GO ile dijitalleştiriyor.
+            Bloom2GO, çiçeğe en hızlı ulaşabileceğiniz merkezi noktaları şehir yaşamının akışına dahil ediyor.
           </p>
         </div>
       </section>
@@ -150,7 +150,7 @@ const ServiceAreasPage = () => {
               Hizmet Verdiğimiz Bölgeler
             </h2>
             <p className="text-lg text-[rgba(251,250,246,0.68)] max-w-2xl mx-auto">
-              Size en yakın hizmet alanlarını inceleyin ve işletmenize uygun çalışma modeli için bizimle iletişime geçin.
+              Size en yakın Bloom2GO noktalarını inceleyin ve bulunduğunuz bölgedeki erişim seçeneklerini keşfedin.
             </p>
           </div>
 
@@ -158,7 +158,7 @@ const ServiceAreasPage = () => {
             <div className="text-center py-12">
               <div className="text-6xl mb-4">🏗️</div>
               <h3 className="text-xl font-semibold text-[var(--lale-ivory)] mb-2">Henüz Hizmet Bölgesi Eklenmemiş</h3>
-              <p className="text-[rgba(251,250,246,0.68)]">Admin panelinden hizmet bölgeleri ekleyebilirsiniz.</p>
+              <p className="text-[rgba(251,250,246,0.68)]">Yakında yeni konum bilgileri burada yer alacak.</p>
               
               {/* Debug Info */}
               <div className="mt-6 p-4 bg-[rgba(251,250,246,0.06)] rounded-lg text-left max-w-2xl mx-auto border border-[rgba(212,175,55,0.14)]">
@@ -217,7 +217,7 @@ const ServiceAreasPage = () => {
               Çalışmalarımızdan Örnekler
             </h2>
             <p className="text-lg text-[rgba(251,250,246,0.68)] max-w-2xl mx-auto">
-              Hizmet verdiğimiz bölgelerdeki kurumsal çalışmalardan seçilen görseller
+              Bloom2GO deneyimini ve konum atmosferini yansıtan seçili görseller
             </p>
           </div>
 
@@ -264,7 +264,7 @@ const ServiceAreasPage = () => {
             <div className="text-center py-12">
               <div className="text-6xl mb-4">🖼️</div>
               <h3 className="text-xl font-semibold text-[var(--lale-ivory)] mb-2">Henüz Galeri Resmi Eklenmemiş</h3>
-              <p className="text-[rgba(251,250,246,0.68)]">Admin panelinden galeri resimleri ekleyebilirsiniz.</p>
+              <p className="text-[rgba(251,250,246,0.68)]">Yakında bu bölüme yeni görseller eklenecek.</p>
             </div>
           )}
 
@@ -285,10 +285,10 @@ const ServiceAreasPage = () => {
       <section className="lale-dark-section py-16">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-[var(--lale-ivory)] mb-6">
-            Size En Yakın Hizmet Bölgesini Mi Arıyorsunuz?
+            Size En Yakın Bloom2GO Noktasını mı Arıyorsunuz?
           </h2>
           <p className="text-xl text-[rgba(251,250,246,0.72)] mb-8">
-            Ekibimizle iletişime geçin, size uygun hizmet bölgesini ve çalışma planını birlikte netleştirelim.
+            Ekibimizle iletişime geçin; size en uygun konumları ve erişim seçeneklerini birlikte paylaşalım.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

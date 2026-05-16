@@ -145,12 +145,12 @@ const NewsPage = () => {
             </div>
 
             <h1 className="font-serif text-[clamp(2.4rem,5vw,4.8rem)] leading-[1.02] tracking-[-0.04em] text-white">
-              Çiçekçilik Dünyasında <br />
-              <span className="text-[#ffd39e]">Dijital Gelişmeler</span>
+              Çiçek Seçimi ve <br />
+              <span className="text-[#ffd39e]">Hediye Anları İçin İlhamlar</span>
             </h1>
 
             <p className="mt-8 max-w-2xl text-lg leading-relaxed text-white/90">
-              Sektörel trendler, teknoloji güncellemeleri ve operasyonel verimlilik sırlarını Bloom2GO farkıyla buradan takip edin.
+              Doğru buketi seçmek, son dakika jestlerini zarif hale getirmek ve çiçekle ilgili ilham verici içerikleri keşfetmek için buraya göz atın.
             </p>
           </motion.div>
         </div>
@@ -253,7 +253,7 @@ const NewsPage = () => {
             </div>
             <h3 className="font-serif text-3xl text-[#2a211c]">Bloom2GO Bültene Kaydolun</h3>
             <p className="mt-5 text-base text-[#7a5c49] leading-8">
-              En yeni operasyonel ipuçları, teknoloji haberleri ve Bloom2GO duyurularını doğrudan gelen kutunuzda karşılayın.
+              Yeni içerikler, çiçek seçimi önerileri ve Bloom2GO duyuruları doğrudan gelen kutunuza gelsin.
             </p>
             
             <form onSubmit={handleNewsletterSubscription} className="mt-10 flex flex-col sm:flex-row gap-4">

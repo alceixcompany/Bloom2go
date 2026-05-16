@@ -17,11 +17,11 @@ const Contact = () => {
                 Bloom2GO İletişim
               </p>
               <h2 className="mt-5 max-w-[560px] font-serif text-[40px] leading-[0.95] sm:text-[54px] lg:text-[68px]">
-                Mağazanızdaki her buketin akışına birlikte bakalım
+                Size en yakın Bloom2GO noktasını birlikte bulalım
               </h2>
               <p className="mt-6 max-w-[560px] text-base leading-8 text-[rgba(255,248,242,0.76)] sm:text-lg">
-                Tek şube ya da çoklu mağaza yapınız varsa, siparişten teslimata kadar hangi akışın size en
-                uygun olduğunu birlikte netleştirelim.
+                Otomat konumları, iş birlikleri ya da hizmet detayları hakkında bilgi almak isterseniz
+                bize ulaşın. Ekibimiz sizi doğru noktaya hızlıca yönlendirsin.
               </p>
 
               <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -64,10 +64,10 @@ const Contact = () => {
                   <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(34,26,22,0.72),rgba(34,26,22,0.18))]" />
                   <div className="absolute bottom-0 left-0 p-6 sm:p-7">
                     <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-[var(--lale-gold)]">
-                      Demo Akışı
+                      Bloom2GO Noktaları
                     </p>
                     <p className="mt-3 max-w-[280px] font-serif text-[30px] leading-[1.05] text-white">
-                      Siparişin sistemde nasıl aktığını birlikte görelim.
+                      Şehrinizdeki uygun otomat konumlarını birlikte paylaşalım.
                     </p>
                   </div>
                 </div>
@@ -78,9 +78,9 @@ const Contact = () => {
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-[var(--lale-gold)]">
-                    Hızlı Başvuru
+                    Hızlı İletişim
                   </p>
-                  <h3 className="mt-3 font-serif text-3xl">Size uygun kurguyu anlatalim</h3>
+                  <h3 className="mt-3 font-serif text-3xl">Size nasıl yardımcı olabileceğimizi yazın</h3>
                 </div>
                 <div className="hidden h-12 w-12 items-center justify-center rounded-full border border-white/10 text-[var(--lale-gold)] sm:flex">
                   <FiArrowUpRight className="h-5 w-5" />
@@ -90,11 +90,11 @@ const Contact = () => {
               <form className="mt-10 space-y-5">
                 <div>
                   <label className="text-[10px] font-semibold uppercase tracking-[0.24em] text-[var(--lale-gold)]">
-                    İşletme Adı
+                    Ad Soyad
                   </label>
                   <input
                     type="text"
-                    placeholder="Örnek Çiçek Atölyesi"
+                    placeholder="Adınızı yazın"
                     className="mt-2 w-full rounded-[22px] border border-[rgba(255,248,242,0.16)] bg-[rgba(255,248,242,0.10)] px-5 py-4 text-sm text-[var(--lale-ivory)] placeholder:text-[rgba(255,248,242,0.52)] focus:border-[var(--lale-gold)] focus:bg-[rgba(255,248,242,0.13)] focus:outline-none"
                   />
                 </div>
@@ -116,7 +116,7 @@ const Contact = () => {
                   </label>
                   <textarea
                     rows={7}
-                    placeholder="Kaç şube ile çalışıyorsunuz, hangi süreci dijitalleştirmek istiyorsunuz?"
+                    placeholder="Otomat konumları, iş birliği ya da hizmet detayları hakkında mesajınızı yazın"
                     className="mt-2 w-full rounded-[22px] border border-[rgba(255,248,242,0.16)] bg-[rgba(255,248,242,0.10)] px-5 py-4 text-sm text-[var(--lale-ivory)] placeholder:text-[rgba(255,248,242,0.52)] focus:border-[var(--lale-gold)] focus:bg-[rgba(255,248,242,0.13)] focus:outline-none resize-none"
                   />
                 </div>

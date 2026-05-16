@@ -85,10 +85,10 @@ const Header = () => {
 
           <div className="hidden md:block">
             <Link
-              href="/iletisim"
+              href="/hizmet-bolgelerimiz"
               className="inline-flex items-center justify-center rounded-full bg-[#2a211c] px-7 py-3 text-[10px] font-bold uppercase tracking-[0.2em] text-white transition-all duration-300 hover:bg-[#f7931e] active:scale-95 shadow-lg shadow-[#2a211c]/10"
             >
-              Hemen Başlayın
+              Otomat Konumları
             </Link>
           </div>
 
@@ -147,17 +147,17 @@ const Header = () => {
 
             <div className="mt-auto rounded-[40px] border border-[rgba(42,33,28,0.08)] bg-white/70 p-8 shadow-xl">
               <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#a56f47]">
-                Bloom2GO Dijital
+                Bloom2GO Deneyimi
               </p>
               <p className="mt-4 font-serif text-2xl leading-tight text-[#2a211c]">
-                Sipariş, stok ve teslimat akışınızı tek sistemde toplayın.
+                Taze çiçeğe hızlı, şık ve güvenli biçimde ulaşın.
               </p>
               <Link
-                href="/iletisim"
+                href="/hizmet-bolgelerimiz"
                 className="mt-8 inline-flex w-full items-center justify-center rounded-2xl bg-[#f7931e] px-6 py-5 text-xs font-bold uppercase tracking-[0.2em] text-white"
                 onClick={() => setIsMenuOpen(false)}
               >
-                DEMO TALEBİ
+                OTOMAT KONUMLARI
               </Link>
             </div>
           </div>,

@@ -31,7 +31,7 @@ const Footer = () => {
               </div>
             </Link>
             <p className="mt-5 max-w-xs text-sm leading-7 text-[var(--lale-emerald-soft)] md:max-w-sm">
-              Bloom2GO, çiçek siparişi, florist hazırlığı, stok ve teslimat akışlarını tek panelde buluşturan operasyon platformudur.
+              Bloom2GO, taze çiçeği günün her saatinde ulaşılabilir kılan akıllı otomat deneyimidir.
             </p>
           </div>
 
@@ -40,7 +40,7 @@ const Footer = () => {
             <ul className="mt-6 space-y-4 text-sm text-[var(--lale-emerald-soft)]">
               <li>
                 <Link href="/hizmetlerimiz" className="transition-colors hover:text-[var(--lale-gold)]">
-                  Özellikler
+                  Deneyim Detayları
                 </Link>
               </li>
               <li>
@@ -77,7 +77,7 @@ const Footer = () => {
 
         <div className="py-8 text-center">
           <p className="text-xs uppercase tracking-[0.18em] text-[var(--lale-emerald-soft)]">
-            © 2026 Bloom2GO. Çiçek operasyonlarında dijital akış.
+            © 2026 Bloom2GO. Taze çiçeğe akıllı erişim.
           </p>
         </div>
       </div>

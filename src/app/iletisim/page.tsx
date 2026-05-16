@@ -115,12 +115,12 @@ const ContactPage = () => {
             </div>
 
             <h1 className="font-serif text-[clamp(2.4rem,5vw,4.8rem)] leading-[1.02] tracking-[-0.04em] text-white">
-              Operasyonlarınızı <br />
-              <span className="text-[#ffd39e]">Birlikte Dönüştürelim</span>
+              Bloom2GO ile <br />
+              <span className="text-[#ffd39e]">Bağlantıya Geçin</span>
             </h1>
 
             <p className="mt-8 max-w-2xl text-lg leading-relaxed text-white/90">
-              Mağazanızın ihtiyaçlarını, şube yapınızı ve hedeflerinizi dinleyelim; size en uygun Bloom2GO kurgusunu birlikte şekillendirelim.
+              Otomat konumları, hizmet detayları veya iş birliği fırsatları hakkında ekibimizden hızlıca bilgi alın.
             </p>
           </motion.div>
         </div>
@@ -138,7 +138,7 @@ const ContactPage = () => {
                 className="bg-white border border-[rgba(42,33,28,0.06)] rounded-[40px] p-8 sm:p-12 shadow-xl"
               >
                 <h2 className="font-serif text-3xl text-[#2a211c] mb-3">İletişim Formu</h2>
-                <p className="text-base text-[#7a5c49] mb-10">Sorularınız veya demo talepleriniz için formu doldurabilirsiniz.</p>
+                <p className="text-base text-[#7a5c49] mb-10">Sorularınız, konum talepleriniz veya iş birliği mesajlarınız için formu doldurabilirsiniz.</p>
 
                 {success && (
                   <motion.div 
@@ -203,12 +203,11 @@ const ContactPage = () => {
                         className="w-full px-6 py-4 bg-[#fcf7f2] border border-[rgba(42,33,28,0.08)] rounded-2xl focus:outline-none focus:border-[#f7931e] focus:ring-2 focus:ring-[#f7931e]/10 text-base transition-all appearance-none cursor-pointer"
                       >
                         <option value="">Seçiniz</option>
-                        <option value="siparis-yonetimi">Sipariş Yönetimi</option>
-                        <option value="hazirlik-akisi">Hazırlık Akışı (Florist)</option>
-                        <option value="stok-takibi">Taze Stok Takibi</option>
-                        <option value="kurye-teslimat">Kurye ve Teslimat</option>
-                        <option value="sube-merkezi">Çoklu Şube Yönetimi</option>
-                        <option value="demo-talebi">Demo Talebi</option>
+                        <option value="otomat-konumlari">Otomat Konumları</option>
+                        <option value="urun-ve-tazelik">Ürünler ve Tazelik</option>
+                        <option value="odeme-ve-kullanim">Ödeme ve Kullanım</option>
+                        <option value="is-birligi">İş Birliği Talebi</option>
+                        <option value="kurulum-talebi">Kurulum Talebi</option>
                         <option value="diger">Diğer</option>
                       </select>
                     </div>
@@ -236,7 +235,7 @@ const ContactPage = () => {
                       rows={4}
                       required
                       className="w-full px-6 py-4 bg-[#fcf7f2] border border-[rgba(42,33,28,0.08)] rounded-2xl focus:outline-none focus:border-[#f7931e] focus:ring-2 focus:ring-[#f7931e]/10 text-base transition-all resize-none"
-                      placeholder="İhtiyaçlarınızı veya sorularınızı buraya yazabilirsiniz."
+                      placeholder="Sorunuzu veya talebinizi buraya yazabilirsiniz."
                     />
                   </div>
 

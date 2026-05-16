@@ -10,25 +10,25 @@ const milestones = [
   {
     year: '2019',
     title: 'Temeller ve Vizyon',
-    subtitle: 'Çiçekçilik sektöründeki dijital boşluğu fark ederek, ilk operasyonel modellerimizi kağıt üzerine döktük.',
+    subtitle: 'Çiçeği günün her saatinde erişilebilir kılacak yeni nesil deneyimin ilk fikirlerini şekillendirdik.',
     image: withAssetVersion('/about/milestone_2019.png'),
   },
   {
     year: '2021',
     title: 'İlk Dijital Dönüşüm',
-    subtitle: 'Floristlerin iş akışını bozmayan, hazırlık masasına entegre ilk dijital panellerimizi hayata geçirdik.',
+    subtitle: 'Akıllı otomat deneyimini daha sezgisel ve kullanıcı dostu hale getiren ilk uygulamalarımızı geliştirdik.',
     image: withAssetVersion('/about/milestone_2021.png'),
   },
   {
     year: '2023',
     title: 'Entegre Ekosistem',
-    subtitle: 'Sadece mağaza değil, kurye ve şube yönetimini de kapsayan uçtan uca bir operasyon ağına dönüştük.',
+    subtitle: 'Merkezi konumlar, taze ürün döngüsü ve hızlı alışveriş akışını aynı marka deneyiminde buluşturduk.',
     image: withAssetVersion('/about/milestone_2023.png'),
   },
   {
     year: '2025',
     title: 'Geleceğin Çiçekçiliği',
-    subtitle: 'Yapay zeka destekli stok tahmini ve akıllı rota optimizasyonu ile sektöre yeni bir standart getirdik.',
+    subtitle: 'Tazelik takibi, erişilebilir lokasyon seçimi ve kullanıcı deneyimi odağıyla sektörde yeni bir standart kurduk.',
     image: withAssetVersion('/about/milestone_2025.png'),
   },
 ] as const;
@@ -62,12 +62,13 @@ const AboutPage = () => {
             </div>
 
             <h1 className="font-serif text-[clamp(2.4rem,5vw,4.8rem)] leading-[1.02] tracking-[-0.04em] text-white">
-              Çiçek operasyonlarına <br />
-              <span className="text-[#ffd39e]">daha sade bir düzen</span> getiriyoruz
+              Çiçeğe Ulaşmayı <br />
+              <span className="text-[#ffd39e]">daha kolay ve daha zarif</span> hale getiriyoruz
             </h1>
 
             <p className="mt-8 max-w-2xl text-lg leading-relaxed text-white/90">
-              Bloom2GO, florist ekiplerinin ve mağaza yöneticilerinin siparişten teslimata kadar tüm akışı daha görünür, daha hızlı ve daha sakin yönetebilmesi için tasarlanmış yeni nesil bir operasyon ekosistemidir.
+              Bloom2GO, taze çiçek buketlerini günün temposuna uyum sağlayan akıllı otomatlarla buluşturan,
+              modern şehir yaşamına uygun yeni nesil bir deneyim markasıdır.
             </p>
           </motion.div>
         </div>
@@ -87,21 +88,21 @@ const AboutPage = () => {
 
               <div className="mt-8 space-y-6 text-base leading-8 text-[#7a5c49]">
                 <p>
-                  Bloom2GO’da amacımız yalnızca siparişleri listelemek değil; floristin hazırlık masasında, yöneticinin şube ekranında ve kuryenin teslimat akışında aynı netliği hissettiren bir sistem kurmak.
+                  Bloom2GO’da amacımız, çiçeği yalnızca planlı alışverişin değil spontane jestlerin de doğal bir parçası haline getirmek.
                 </p>
                 <p>
-                  Çiçekçilik ritmini bilen, yoğun saatleri ve taze ürün hassasiyetini anlayan bir ürün diliyle operasyonları daha görünür ve daha sakin hale getiriyoruz.
+                  Bu yüzden tazeliği koruyan teknoloji, merkezi konum seçimi ve sade kullanıcı deneyimini aynı bütünlük içinde tasarlıyoruz.
                 </p>
               </div>
 
               <div className="mt-12 grid grid-cols-2 gap-8 border-t border-[rgba(42,33,28,0.08)] pt-10">
                 <div>
                   <div className="text-3xl font-bold text-[#f7931e]">5+</div>
-                  <div className="mt-1 text-[11px] font-bold uppercase tracking-widest text-[#8a6448]">Temel operasyon modülü</div>
+                  <div className="mt-1 text-[11px] font-bold uppercase tracking-widest text-[#8a6448]">Deneyimi güçlendiren temel katman</div>
                 </div>
                 <div>
-                  <div className="text-3xl font-bold text-[#f7931e]">Tek</div>
-                  <div className="mt-1 text-[11px] font-bold uppercase tracking-widest text-[#8a6448]">Panelde görünür akış</div>
+                  <div className="text-3xl font-bold text-[#f7931e]">7/24</div>
+                  <div className="mt-1 text-[11px] font-bold uppercase tracking-widest text-[#8a6448]">Kesintisiz erişim anlayışı</div>
                 </div>
               </div>
             </div>
@@ -171,7 +172,7 @@ const AboutPage = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                 <div className="absolute left-8 top-8 rounded-full border border-white/20 bg-white/15 px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[0.24em] text-white backdrop-blur-md">
-                  Florist odağı
+                  Kullanıcı odağı
                 </div>
                 <div className="absolute bottom-10 left-10">
                   <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#f7931e] text-white shadow-2xl">
@@ -182,7 +183,7 @@ const AboutPage = () => {
               <div className="max-w-xl">
                 <h3 className="font-serif text-4xl tracking-[-0.03em] text-[#2a211c]">Misyonumuz</h3>
                 <p className="mt-8 text-lg leading-8 text-[#7a5c49]">
-                  Çiçekçilerin günlük operasyonlarını daha sade, görünür ve yönetilebilir hale getirmek; siparişten teslimata kadar tüm ekiplere aynı netliği sunan bir dijital çalışma alanı oluşturmak.
+                  Taze çiçeği herkes için daha erişilebilir kılmak; doğru konum, güvenilir tazelik ve hızlı alışveriş deneyimini tek marka çatısı altında sunmak.
                 </p>
               </div>
             </div>
@@ -191,7 +192,7 @@ const AboutPage = () => {
               <div className="order-2 max-w-xl lg:order-1">
                 <h3 className="font-serif text-4xl tracking-[-0.03em] text-[#2a211c]">Vizyonumuz</h3>
                 <p className="mt-8 text-lg leading-8 text-[#7a5c49]">
-                  Çiçek operasyon teknolojilerinde sade ama güçlü bir standart oluşturmak; floristlerin, mağaza yöneticilerinin ve teslimat ekiplerinin aynı sistem içinde daha uyumlu çalışmasını sağlayan küresel bir referans ürün haline gelmek.
+                  Şehir yaşamında çiçeğe ulaşmanın en pratik, en güvenilir ve en estetik yolu olarak akla gelen ilk marka olmak.
                 </p>
               </div>
               <motion.div
@@ -231,10 +232,10 @@ const AboutPage = () => {
 
           <div className="grid grid-cols-2 gap-8 lg:grid-cols-4">
             {[
-              { icon: FiShield, title: 'Güven', desc: 'Veriyi sade ve şeffaf şekilde görünür kılmak.', bg: 'bg-[#fff1e4]', text: 'text-[#f7931e]' },
-              { icon: FiCheckCircle, title: 'Netlik', desc: 'Ekiplerin tek bakışta ne yapacağını anlaması.', bg: 'bg-[#f3eadf]', text: 'text-[#a56f47]' },
-              { icon: FiClock, title: 'Ritim', desc: 'Yoğun saatlere ve teslimat temposuna uyum.', bg: 'bg-[#fff7f1]', text: 'text-[#c77a38]' },
-              { icon: FiTrendingUp, title: 'Gelişim', desc: 'Ürünü sahadaki gerçek kullanıma göre iyileştirmek.', bg: 'bg-[#efe6db]', text: 'text-[#7a5c49]' },
+              { icon: FiShield, title: 'Güven', desc: 'Her alışveriş anında kalite ve tazelik hissini korumak.', bg: 'bg-[#fff1e4]', text: 'text-[#f7931e]' },
+              { icon: FiCheckCircle, title: 'Netlik', desc: 'Seçimden ödemeye kadar sade ve anlaşılır bir deneyim sunmak.', bg: 'bg-[#f3eadf]', text: 'text-[#a56f47]' },
+              { icon: FiClock, title: 'Ritim', desc: 'Günün her saatine ve ani ihtiyaç anlarına uyum sağlamak.', bg: 'bg-[#fff7f1]', text: 'text-[#c77a38]' },
+              { icon: FiTrendingUp, title: 'Gelişim', desc: 'Deneyimi kullanıcıların gerçek alışkanlıklarına göre sürekli iyileştirmek.', bg: 'bg-[#efe6db]', text: 'text-[#7a5c49]' },
             ].map((item) => (
               <div key={item.title} className="group rounded-[32px] border border-[rgba(42,33,28,0.08)] bg-white p-8 text-center shadow-sm transition-all duration-300 hover:shadow-lg">
                 <div className={`mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-2xl transition-transform duration-300 group-hover:scale-110 ${item.bg} ${item.text}`}>
@@ -252,10 +253,10 @@ const AboutPage = () => {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="rounded-[48px] bg-[#2a211c] p-12 text-center md:p-20 shadow-[0_40px_100px_rgba(0,0,0,0.2)]">
             <h2 className="font-serif text-3xl tracking-[-0.03em] text-white sm:text-5xl">
-              Bloom2GO ile <span className="text-[#ffd39e]">daha görünür bir akış</span> kurun
+              Bloom2GO ile <span className="text-[#ffd39e]">çiçeğe daha yakın olun</span>
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-white/75">
-              Siparişten florist hazırlığına, stoktan teslimata kadar mağazanıza en uygun Bloom2GO kurgusunu birlikte planlayalım.
+              Konumlar, iş birlikleri veya marka deneyimimiz hakkında daha fazla bilgi almak için bizimle iletişime geçin.
             </p>
             <div className="mt-12 flex flex-col justify-center gap-6 sm:flex-row">
               <Link href="/iletisim" className="rounded-full bg-[#f7931e] px-10 py-4 text-sm font-bold text-white shadow-lg transition-all hover:bg-[#f57c00] hover:scale-105">

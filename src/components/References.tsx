@@ -5,23 +5,23 @@ import React from 'react';
 const References = () => {
   const testimonials = [
     {
-      name: 'Boutique Floral Studio',
-      title: 'Nişantaşı',
-      comment: 'Sipariş yoğunluğunda kaybolmayı bıraktık. Bloom2GO sayesinde her buket hangi aşamada hemen görünüyor.',
+      name: 'Elif K.',
+      title: 'Havalimanı Noktası',
+      comment: 'Uçağa yetişmeden önce birkaç dakikada gerçekten şık bir buket alabildim. Son dakika için büyük rahatlık.',
       tone: 'bg-[#fffde7]',
       rotate: '-rotate-2',
     },
     {
-      name: 'Gül ve Bahçe Şubeleri',
-      title: 'Çoklu Şube Yönetimi',
-      comment: 'Şubeler arası stok ve hazırlık akışını tek panelde görmek operasyonumuzu ciddi biçimde hızlandırdı.',
+      name: 'Mert A.',
+      title: 'AVM Lokasyonu',
+      comment: 'Akşam saati çiçekçi aramak yerine doğrudan otomatı kullandım. Ödeme çok hızlıydı, buket de oldukça tazeydi.',
       tone: 'bg-[#f1f8e9]',
       rotate: 'rotate-2',
     },
     {
-      name: 'Sanat Florist',
-      title: 'Atölye ve Kurye Takibi',
-      comment: 'Floristlerimiz neyin acil olduğunu, kuryelerimiz de hangi teslimatın yolda olduğunu aynı panelden izliyor.',
+      name: 'Zeynep T.',
+      title: 'Metro Çıkışı',
+      comment: 'İşten çıkarken spontane bir hediye almak istedim. Konumu kolaydı, seçim yapmak da düşündüğümden çok daha pratikti.',
       tone: 'bg-[#fce4ec]',
       rotate: '-rotate-1',
     },
@@ -32,13 +32,13 @@ const References = () => {
       <div className="mx-auto max-w-7xl px-5 sm:px-7 lg:px-10">
         <div className="text-center">
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[var(--lale-emerald-soft)]">
-            Kullanan Çiçekçiler
+            Kullananlar Ne Diyor
           </p>
           <h2 className="mt-5 font-serif text-4xl text-[var(--lale-anthracite)] sm:text-5xl">
-            Bloom2GO ile Akan İş Notları
+            Bloom2GO Deneyimini Yaşayanlardan
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-[var(--lale-emerald-soft)] sm:text-lg">
-            Gerçek operasyonlarda hız, netlik ve teslimat kalitesi kazanan ekiplerden kısa notlar.
+            Çiçeğe hızlı ulaşmak, tazelikten emin olmak ve doğru anda doğru jesti yapmak isteyen kullanıcıların kısa notları.
           </p>
         </div>
 

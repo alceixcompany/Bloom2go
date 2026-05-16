@@ -39,31 +39,37 @@ const staticPages = [
 // Hizmetler (statik)
 const services = [
   {
-    url: '/hizmetlerimiz/siparis-yonetimi',
+    url: '/hizmetlerimiz/otomat-agi',
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: 0.8,
   },
   {
-    url: '/hizmetlerimiz/hazirlik-akisi',
+    url: '/hizmetlerimiz/tazelik-teknolojisi',
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: 0.8,
   },
   {
-    url: '/hizmetlerimiz/stok-takibi',
+    url: '/hizmetlerimiz/7-24-erisim',
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: 0.8,
   },
   {
-    url: '/hizmetlerimiz/kurye-teslimat',
+    url: '/hizmetlerimiz/akilli-odeme',
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: 0.8,
   },
   {
-    url: '/hizmetlerimiz/sube-yonetimi',
+    url: '/hizmetlerimiz/tedarik-zinciri',
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  },
+  {
+    url: '/hizmetlerimiz/musteri-deneyimi',
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: 0.8,

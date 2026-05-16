@@ -133,15 +133,15 @@ const GaleriPage = () => {
           <div className="max-w-2xl pt-[20px]">
             <div className="flex items-center gap-3 mb-6">
               <span className="h-px w-12 bg-[#f7931e]" />
-              <span className="text-sm tracking-[0.3em] text-[#f7931e] uppercase font-bold">OPERASYON GÖRÜNÜMÜ</span>
+              <span className="text-sm tracking-[0.3em] text-[#f7931e] uppercase font-bold">BLOOM2GO ATMOSFERİ</span>
             </div>
             
             <h1 className="mb-6 font-serif text-[64px] leading-[0.9] text-[#fcf7f2] sm:text-[86px]">
-              Sistem <span className="block text-[#f7931e]">Galerisi</span>
+              Deneyim <span className="block text-[#f7931e]">Galerisi</span>
             </h1>
             
             <p className="max-w-lg text-lg leading-relaxed text-[rgba(252,247,242,0.8)] sm:text-xl">
-              Bloom2GO operasyonel akışlarını, florist hazırlık ekranlarını ve kurye modüllerini yakından inceleyin.
+              Bloom2GO noktalarını, ürün sunumlarını ve marka deneyimini yansıtan kareleri yakından inceleyin.
             </p>
           </div>
         </div>
@@ -155,13 +155,12 @@ const GaleriPage = () => {
             </div>
 
             <h2 className="mt-8 font-serif text-4xl leading-tight text-[var(--lale-ivory)] sm:text-5xl">
-              Çalışma biçimimizi anlatan
-              <span className="block text-[var(--lale-gold)]">kurumsal yansımalar</span>
+              Bloom2GO ruhunu taşıyan
+              <span className="block text-[var(--lale-gold)]">seçili kareler</span>
             </h2>
 
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-[rgba(251,250,246,0.72)]">
-              Her karede düzen, güven ve kurumsal iletişim hissini öne çıkaran
-              bir seçki sunuyoruz.
+              Her karede tazelik, zarafet ve kolay erişim hissini öne çıkaran bir seçki sunuyoruz.
             </p>
           </div>
 

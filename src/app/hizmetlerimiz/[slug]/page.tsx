@@ -7,79 +7,94 @@ import { FiArrowRight, FiCheckCircle, FiArrowLeft, FiClock, FiSettings, FiActivi
 import { motion } from 'framer-motion';
 
 const servicesData = {
-  'siparis-yonetimi': {
-    title: 'Sipariş Yönetimi',
+  'otomat-agi': {
+    title: 'Otomat Ağı',
     image: '/services/siparis-yonetimi.png',
     icon: '01',
-    description: 'Web sitesi, pazar yerleri ve fiziksel mağaza siparişlerini tek bir akıllı panelde toplayın.',
-    features: ['Çapraz kanal sipariş toplama', 'Otomatik şube yönlendirme', 'Varyant ve özel not takibi', 'Anlık sipariş durumu güncelleme'],
-    overview: 'Bloom2GO Sipariş Yönetimi modülü, çiçekçiliğin kaotik sipariş akışını sadeleştirerek ekiplerinizin neyin ne zaman hazırlanacağını tek bakışta görmesini sağlar.',
-    whyChoose: ['Kayıp sipariş riskini ortadan kaldırır', 'Hazırlık süresini %30 azaltır', 'Müşteri bilgilendirmesini otomatikleştirir'],
+    description: 'Şehrin en prestijli noktalarında 7/24 aktif Bloom2GO çiçek otomatları.',
+    features: ['AVM ve havalimanı konumları', 'Yüksek yaya trafiğine uygun erişim', 'Kolay fark edilen nokta kurgusu', 'Şehir içinde hızlı ulaşım avantajı'],
+    overview: 'Bloom2GO Otomat Ağı, çiçeği yalnızca belirli saatlerde değil günün doğal akışı içinde ulaşılabilir kılar. Merkezi lokasyon seçimi sayesinde spontane jestler bile zahmetsiz hale gelir.',
+    whyChoose: ['Size en yakın noktayı kolayca bulursunuz', 'Son dakika ihtiyaçlarında zaman kazandırır', 'Şehir temposuna uyumlu bir erişim deneyimi sunar'],
     process: [
-      { step: 1, title: 'Kanal Bağlantısı', description: 'Tüm sipariş kanallarınız Bloom2GO ile entegre edilir.' },
-      { step: 2, title: 'Akış Tanımlama', description: 'Şube ve personel yetkileri belirlenir.' },
-      { step: 3, title: 'Otomasyon', description: 'Gelen siparişler kriterlere göre ilgili şubeye düşer.' },
-      { step: 4, title: 'Canlı Takip', description: 'Tüm süreç yönetici paneli üzerinden izlenir.' },
+      { step: 1, title: 'Konumu Bulun', description: 'Size en yakın Bloom2GO noktasını hızlıca belirleyin.' },
+      { step: 2, title: 'Otomata Ulaşın', description: 'Merkezi lokasyon avantajıyla kısa sürede noktaya gidin.' },
+      { step: 3, title: 'Ürünleri İnceleyin', description: 'Vitrindeki buketleri ve seçenekleri ekrandan görün.' },
+      { step: 4, title: 'Satın Alın', description: 'Beğendiğiniz buketi anında alarak yolunuza devam edin.' },
     ],
   },
-  'hazirlik-akisi': {
-    title: 'Hazırlık Akışı',
+  'tazelik-teknolojisi': {
+    title: 'Tazelik Teknolojisi',
     image: '/services/hazirlik-akisi.png',
     icon: '02',
-    description: 'Floristler için tasarlanmış, teslimat saatine göre önceliklendirilmiş görsel hazırlık ekranları.',
-    features: ['Florist dostu dokunmatik arayüz', 'Buket fotoğrafı onay sistemi', 'Hazırlık süresi takibi', 'Malzeme listesi görünümü'],
-    overview: 'Hazırlık Akışı modülü, atölye içindeki karmaşayı bitirir. Her florist, kendi ekranından hangi buketi hangi sırayla hazırlayacağını görür.',
-    whyChoose: ['Yanlış ürün hazırlama riskini önler', 'Ekipler arası koordinasyonu artırır', 'Hazırlık kalitesini standartlaştırır'],
+    description: 'Gelişmiş iklimlendirme sayesinde buketler gün boyu canlılığını korur.',
+    features: ['Isı ve nem dengesi', 'Koruyucu saklama ortamı', 'Günlük tazelik kontrolü', 'Ürün kalitesini destekleyen iç sistem'],
+    overview: 'Bloom2GO Tazelik Teknolojisi, çiçeklerin en hassas ihtiyaçlarını göz önünde bulundurarak tasarlanır. Böylece müşteriler yalnızca hızlı değil, güvenilir bir kalite deneyimi de yaşar.',
+    whyChoose: ['Çiçeklerin formu daha uzun süre korunur', 'Alışveriş anında güven hissi yaratır', 'Marka deneyimini kaliteyle destekler'],
     process: [
-      { step: 1, title: 'Görev Atama', description: 'Siparişler floristlerin ekranına düşer.' },
-      { step: 2, title: 'Görsel Rehber', description: 'Ürün görselleri ve notlar detaylı gösterilir.' },
-      { step: 3, title: 'Onay Süreci', description: 'Hazırlanan ürünün fotoğrafı çekilerek onaylanır.' },
-      { step: 4, title: 'Teslimat Geçişi', description: 'Ürün hazırlandığı an kurye modülüne aktarılır.' },
+      { step: 1, title: 'Koruma Ortamı', description: 'Otomat içi ısı ve nem dengesi sabit tutulur.' },
+      { step: 2, title: 'Günlük Kontrol', description: 'Buketler düzenli olarak gözden geçirilir ve yenilenir.' },
+      { step: 3, title: 'Canlı Sunum', description: 'Müşteri ekrandan mevcut ürünleri güvenle inceler.' },
+      { step: 4, title: 'Taze Teslim', description: 'Seçilen buket doğrudan korunmuş alandan alınır.' },
     ],
   },
-  'stok-takibi': {
-    title: 'Stok Takibi',
+  '7-24-erisim': {
+    title: '7/24 Erişim',
     image: '/services/stok-takibi.png',
     icon: '03',
-    description: 'Taze çiçek stoklarınızı, aksesuarlarınızı ve ambalaj malzemelerinizi anlık olarak izleyin.',
-    features: ['Düşük stok uyarıları', 'Fire ve zayiat takibi', 'Kategori bazlı envanter', 'Tedarikçi yönetim paneli'],
-    overview: 'Çiçekçilikte stok yönetimi hayati önem taşır. Bloom2GO ile taze ürünlerinizin raf ömrünü ve stok seviyelerini dijital olarak yönetin.',
-    whyChoose: ['Fire oranlarını ciddi ölçüde düşürür', 'Yetersiz stok nedeniyle sipariş reddini önler', 'Maliyet kontrolü sağlar'],
+    description: 'Günün hangi saati olursa olsun taze çiçeğe anında ulaşın.',
+    features: ['Gece geç saatlerde kullanım', 'Kutlama öncesi hızlı çözüm', 'Sıra beklemeden alışveriş', 'Mağaza saatinden bağımsız erişim'],
+    overview: 'Bloom2GO 7/24 Erişim modeli, çiçeği yalnızca planlı alışverişe bağlı olmaktan çıkarır. İster sabah erken ister gece geç saatte, ihtiyaç anında çözüm sunar.',
+    whyChoose: ['Beklenmedik anlarda kurtarıcı olur', 'Mağaza kapanış saatlerine bağlı kalmazsınız', 'Spontane hediye anlarını kolaylaştırır'],
     process: [
-      { step: 1, title: 'Envanter Girişi', description: 'Tüm ürünler ve sarf malzemeleri sisteme tanımlanır.' },
-      { step: 2, title: 'Anlık Sarfiyat', description: 'Hazırlanan buketlerle birlikte stoklar otomatik düşer.' },
-      { step: 3, title: 'Akıllı Uyarılar', description: 'Kritik seviyeye düşen ürünler için bildirim gönderilir.' },
-      { step: 4, title: 'Raporlama', description: 'Haftalık ve aylık stok kullanım analizleri sunulur.' },
+      { step: 1, title: 'İhtiyacı Fark Edin', description: 'Hediye ya da ziyaret öncesi çiçeğe ihtiyaç duyduğunuzu belirleyin.' },
+      { step: 2, title: 'En Yakın Noktaya Gidin', description: 'Yakındaki Bloom2GO otomatına kolayca ulaşın.' },
+      { step: 3, title: 'Hızlı Seçim Yapın', description: 'Birkaç adımda uygun buketi seçin.' },
+      { step: 4, title: 'Dakikalar İçinde Tamamlayın', description: 'Ödeme sonrası çiçeğinizi alıp zaman kaybetmeden ilerleyin.' },
     ],
   },
-  'kurye-teslimat': {
-    title: 'Kurye ve Teslimat',
+  'akilli-odeme': {
+    title: 'Akıllı Ödeme',
     image: '/services/hazirlik-akisi.png',
     icon: '04',
-    description: 'Teslimat rotalarını optimize edin ve kuryelerinizin anlık konumunu takip edin.',
-    features: ['Kurye mobil uygulaması', 'Rota optimizasyonu', 'Teslimat kanıtı (Fotoğraf/İmza)', 'Canlı müşteri takibi'],
-    overview: 'Kurye ve Teslimat modülü, hazırlanan buketlerin doğru adrese en hızlı şekilde ulaşmasını sağlar.',
-    whyChoose: ['Yakıt ve zaman tasarrufu sağlar', 'Müşteri memnuniyetini artırır', 'Kurye verimliliğini ölçer'],
+    description: 'Temassız kart ve QR seçenekleriyle saniyeler içinde ödemenizi tamamlayın.',
+    features: ['Temassız ödeme altyapısı', 'Hızlı işlem adımları', 'Güvenli ödeme deneyimi', 'Kolay anlaşılır ekran akışı'],
+    overview: 'Bloom2GO Akıllı Ödeme deneyimi, alışverişin en kritik adımını gereksiz bekleme olmadan tamamlamanızı sağlar. Böylece hız ve güven aynı anda hissedilir.',
+    whyChoose: ['Kasada bekleme hissini ortadan kaldırır', 'Kullanımı son derece pratiktir', 'Güvenli alışveriş duygusunu güçlendirir'],
     process: [
-      { step: 1, title: 'Rota Planlama', description: 'Teslimatlar en verimli rotaya göre sıralanır.' },
-      { step: 2, title: 'Kurye Atama', description: 'Siparişler kuryelerin telefonuna bildirim olarak gider.' },
-      { step: 3, title: 'Teslimat Akışı', description: 'Kurye teslimat anında durum günceller.' },
-      { step: 4, title: 'Geri Bildirim', description: 'Müşteriye teslim edildi bilgisi otomatik gider.' },
+      { step: 1, title: 'Ürünü Seçin', description: 'Dokunmatik ekran üzerinden buketinizi belirleyin.' },
+      { step: 2, title: 'Ödeme Yöntemini Belirleyin', description: 'Kart veya uygun dijital ödeme seçeneğini kullanın.' },
+      { step: 3, title: 'İşlemi Onaylayın', description: 'Kısa ve net adımlarla ödemeyi tamamlayın.' },
+      { step: 4, title: 'Buketinizi Alın', description: 'İşlem onayından hemen sonra ürününüze ulaşın.' },
     ],
   },
-  'sube-yonetimi': {
-    title: 'Şube Yönetimi',
+  'tedarik-zinciri': {
+    title: 'Tedarik Zinciri',
     image: '/services/siparis-yonetimi.png',
     icon: '05',
-    description: 'Birden fazla mağaza ve atölyeyi merkezi bir noktadan tam yetkiyle yönetin.',
-    features: ['Şubeler arası stok aktarımı', 'Merkezi raporlama', 'Şube bazlı performans analizi', 'Esnek yetkilendirme'],
-    overview: 'Zincir çiçekçiler veya birden fazla atölyesi olan işletmeler için operasyonu tek bir merkezden görme imkanı sunar.',
-    whyChoose: ['Merkezi kontrolü kolaylaştırır', 'Şubeler arası iletişimi güçlendirir', 'Kurumsal standartları korur'],
+    description: 'Otomatlardaki ürünler düzenli olarak yenilenir ve tazelik standardı korunur.',
+    features: ['Günlük ürün yenileme', 'Düzenli kalite kontrolü', 'Taze buket devamlılığı', 'Konuma göre ürün güncelleme'],
+    overview: 'Bloom2GO Tedarik Zinciri, her noktada deneyim kalitesini sabit tutmak için düzenli yenileme ve dikkatli ürün planlaması üzerine kuruludur.',
+    whyChoose: ['Vitrinde taze görünüm korunur', 'Ürün sürekliliği sağlanır', 'Müşteri güveni güçlenir'],
     process: [
-      { step: 1, title: 'Merkezi Kurulum', description: 'Tüm şubeler tek bir sistemde toplanır.' },
-      { step: 2, title: 'Yetki Tanımlama', description: 'Şube müdürleri ve personel rolleri belirlenir.' },
-      { step: 3, title: 'Performans Takibi', description: 'Hangi şubenin ne kadar ciro ve hızda çalıştığı izlenir.' },
-      { step: 4, title: 'Dengeli Operasyon', description: 'Yoğunluğa göre şubeler arası sipariş kaydırılır.' },
+      { step: 1, title: 'Planlama', description: 'Her lokasyon için uygun ürün akışı belirlenir.' },
+      { step: 2, title: 'Yerleştirme', description: 'Yeni buketler otomat içine özenle yerleştirilir.' },
+      { step: 3, title: 'Kontrol', description: 'Mevcut ürünlerin durumu düzenli olarak gözden geçirilir.' },
+      { step: 4, title: 'Süreklilik', description: 'Tazelik ve çeşitlilik korunarak deneyim devam ettirilir.' },
+    ],
+  },
+  'musteri-deneyimi': {
+    title: 'Müşteri Deneyimi',
+    image: '/services/siparis-yonetimi.png',
+    icon: '06',
+    description: 'Dokunmatik ekran, sade seçim akışı ve estetik sunumla keyifli bir alışveriş deneyimi yaşatır.',
+    features: ['Kolay anlaşılır ekran dili', 'Buket detay bilgileri', 'Hızlı karar vermeyi destekleyen sunum', 'Marka hissini güçlendiren tasarım'],
+    overview: 'Bloom2GO Müşteri Deneyimi, yalnızca ürün sunmakla kalmaz; çiçek almayı daha çağdaş, rahat ve güven veren bir ritüele dönüştürür.',
+    whyChoose: ['Seçim sürecini zorlaştırmaz', 'Alışverişi daha keyifli hale getirir', 'Hız ile estetiği birlikte sunar'],
+    process: [
+      { step: 1, title: 'Ekranı İnceleyin', description: 'Ürünleri ve detayları anlaşılır biçimde görüntüleyin.' },
+      { step: 2, title: 'Karar Verin', description: 'Tarzınıza ve anın ihtiyacına uygun buketi seçin.' },
+      { step: 3, title: 'Ödemeyi Tamamlayın', description: 'Kısa adımlarla işlemi güvenle bitirin.' },
+      { step: 4, title: 'Deneyimi Tamamlayın', description: 'Buketinizi alıp jestinizi gecikmeden hayata geçirin.' },
     ],
   },
 } as const;
@@ -122,7 +137,7 @@ export default function ServiceDetailPage() {
             </Link>
             <div className="mb-6 flex items-center gap-4">
               <span className="h-px w-12 bg-[#f7931e]" />
-              <span className="text-sm font-bold uppercase tracking-[0.3em] text-[#f7931e]">Modül Detayı</span>
+              <span className="text-sm font-bold uppercase tracking-[0.3em] text-[#f7931e]">Deneyim Detayı</span>
             </div>
             <h1 className="font-serif text-5xl md:text-7xl font-bold text-white leading-tight mb-8">
               {service.title}
@@ -188,7 +203,7 @@ export default function ServiceDetailPage() {
                   <div className="absolute top-0 right-0 h-40 w-40 bg-[#f7931e] opacity-10 blur-3xl -translate-y-20 translate-x-20" />
                   <h3 className="text-2xl font-bold mb-10 flex items-center gap-4">
                     <FiActivity className="text-[#f7931e]" />
-                    Operasyonel Fayda
+                    Neden Tercih Ediliyor?
                   </h3>
                   <div className="space-y-8">
                     {service.whyChoose.map((item) => (
@@ -205,12 +220,12 @@ export default function ServiceDetailPage() {
                   <div className="h-16 w-16 bg-[#f7931e]/10 rounded-2xl flex items-center justify-center mx-auto mb-8">
                     <FiSettings className="h-8 w-8 text-[#f7931e]" />
                   </div>
-                  <h3 className="font-serif text-2xl font-bold mb-4 text-[#2a211c]">Size Özel Demo</h3>
+                  <h3 className="font-serif text-2xl font-bold mb-4 text-[#2a211c]">Daha Fazla Bilgi Alın</h3>
                   <p className="text-base text-[#7a5c49] mb-10 leading-relaxed">
-                    Operasyonel ihtiyaçlarınıza göre sistemi birlikte özelleştirelim.
+                    Konumlar, iş birlikleri ve Bloom2GO deneyimi hakkında ekibimiz size yardımcı olsun.
                   </p>
                   <Link href="/iletisim" className="block w-full rounded-2xl bg-[#f7931e] px-8 py-5 text-sm font-bold text-white shadow-xl shadow-[#f7931e]/20 hover:bg-[#f57c00] transition-all hover:scale-[1.02] active:scale-[0.98]">
-                    DEMO TALEBİ OLUŞTUR
+                    İLETİŞİME GEÇİN
                   </Link>
                 </div>
               </div>

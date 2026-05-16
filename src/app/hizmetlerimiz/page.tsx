@@ -109,21 +109,22 @@ export default function ServicesPage() {
             className="max-w-3xl"
           >
             <p className="mb-5 text-sm font-semibold uppercase tracking-[0.32em] text-[#a56f47]">
-              Bloom2GO Çözümlerimiz
+              Bloom2GO Deneyimi
             </p>
             <h1 className="max-w-4xl font-serif text-[clamp(2.6rem,5vw,5.25rem)] leading-[0.96] tracking-[-0.04em] text-[#2a211c]">
               Taze çiçeklere 7/24 <br /> ulaşmanızı sağlayan teknoloji
             </h1>
             <p className="mt-8 max-w-2xl text-lg leading-8 text-[#8a6448] sm:text-xl">
-              Bloom2GO, akıllı otomat ağları ile çiçekçilik operasyonlarını dijitalleştirerek taze ve tasarım buketleri hayatın her anına taşıyor.
+              Bloom2GO; tazelik, hız ve erişilebilirliği bir araya getirerek çiçeği yalnızca özel günlerde değil,
+              ihtiyaç duyduğunuz her anda ulaşılabilir hale getiriyor.
             </p>
 
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <Link
-                href="/iletisim"
+                href="/hizmet-bolgelerimiz"
                 className="inline-flex items-center justify-center rounded-full bg-[#2a211c] px-7 py-3 text-sm font-semibold text-white transition-transform duration-300 hover:-translate-y-0.5 shadow-lg shadow-[#2a211c]/20"
               >
-                İletişime Geçin
+                Otomat Konumları
               </Link>
               <Link
                 href="#moduller"
@@ -185,10 +186,10 @@ export default function ServicesPage() {
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-sm font-semibold uppercase tracking-[0.32em] text-[#a56f47]">Teknolojimiz</p>
             <h2 className="mt-5 font-serif text-[clamp(2.1rem,4vw,4.2rem)] leading-[1.02] tracking-[-0.04em] text-[#2a211c]">
-              Geleneksel Çiçekçilik, Akıllı Otomatlarla Buluşuyor
+              Çiçek Almayı Kolaylaştıran Detaylar
             </h2>
             <p className="mt-5 text-lg leading-8 text-[#8a6448]">
-              Bloom2GO modülleri, çiçeğin dalından otomatın rafına kadar olan süreci dijital bir hassasiyetle yönetir.
+              Her detay, çiçeğe daha hızlı ulaşmanız ve seçiminizden emin olmanız için tasarlandı.
             </p>
           </div>
 
@@ -336,11 +337,11 @@ export default function ServicesPage() {
                 Yeni Nesil <br /> Çiçekçiliğe Katılın
               </h2>
               <p className="text-xl mb-12 max-w-2xl mx-auto font-medium text-[#2a211c]/80">
-                Otomat ağımızda yer almak veya işletmenize Bloom2GO otomatı kurmak için bizimle iletişime geçin.
+                Bloom2GO konumları, iş birliği fırsatları ya da hizmet detayları hakkında bilgi almak için bize ulaşın.
               </p>
               <div className="flex flex-col sm:flex-row gap-5 justify-center">
                 <Link href="/iletisim" className="bg-[#2a211c] text-white px-12 py-5 rounded-2xl font-bold uppercase tracking-[0.2em] text-xs hover:scale-105 transition-all shadow-xl">
-                  İŞ BİRLİĞİ TALEBİ
+                  BİZE ULAŞIN
                 </Link>
                 <Link href="/hakkimizda" className="bg-white/30 backdrop-blur-md text-[#2a211c] px-12 py-5 rounded-2xl font-bold uppercase tracking-[0.2em] text-xs hover:bg-white/50 transition-all border border-white/20">
                   KURUMSAL BİLGİ

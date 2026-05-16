@@ -7,23 +7,23 @@ import { FiCheckCircle } from 'react-icons/fi';
 const WhyChooseUs = () => {
   const points = [
     {
-      title: 'Kesintisiz Tazelik',
-      description: 'Otomatlarımız, çiçeklerin ihtiyaç duyduğu nem ve sıcaklık dengesini 24 saat boyunca koruyan özel soğutma sistemlerine sahiptir.',
+      title: 'Beklenmedik Anlar İçin Hazır',
+      description: 'Geç saatte alınacak bir hediye, apar topar gidilen bir ziyaret ya da unutulmuş özel günler için erişilebilir bir çözüm sunar.',
     },
     {
-      title: 'Şehrin Kalbinde',
-      description: 'AVM, Metro, Havalimanı gibi yüksek trafikli noktalarda konumlanarak çiçeğe ulaşımı saniyelere indiriyoruz.',
+      title: 'Lokasyon Avantajı',
+      description: 'AVM, metro, havalimanı ve merkezi yaşam noktalarında yer alarak çiçeğe ulaşımı günlük rutinin doğal parçasına dönüştürür.',
     },
     {
-      title: 'Dijital ve Temassız',
-      description: 'Hızlı dokunmatik ekranlar ve temassız ödeme seçenekleriyle, beklemeden ve güvenle alışveriş yapın.',
+      title: 'Şık ve Pratik Deneyim',
+      description: 'Seçimden ödemeye kadar tüm süreç sade, hızlı ve güven verici şekilde tasarlanır; acele ederken bile konforu bozmaz.',
     },
   ];
 
   const stats = [
-    { value: '7/24', label: 'Kesintisiz canlı hizmet' },
-    { value: '%100', label: 'Tazelik ve kalite garantisi' },
-    { value: '30sn', label: 'Ortalama satın alma süresi' },
+    { value: '7/24', label: 'Her saate uyumlu erişim' },
+    { value: 'Merkez', label: 'Yoğun noktalarda görünür konumlar' },
+    { value: 'Hızlı', label: 'Beklemeden tamamlanan alışveriş akışı' },
   ];
 
   return (
@@ -37,11 +37,12 @@ const WhyChooseUs = () => {
               Neden Bloom2GO
             </p>
             <h2 className="mt-5 font-serif text-4xl leading-tight sm:text-5xl">
-              Geleneksel Çiçekçiliği <br />
-              <span className="text-[#f7931e]">Geleceğe Taşıyoruz</span>
+              Çiçek Almayı <br />
+              <span className="text-[#f7931e]">Daha Erişilebilir Hale Getiriyoruz</span>
             </h2>
             <p className="mt-6 max-w-2xl text-base leading-8 text-[rgba(252,247,242,0.7)] sm:text-lg">
-              Bloom2GO, bir satış noktasından daha fazlasıdır. Modern yaşamın hızına uyum sağlayan, tazeliği teknolojiyle birleştiren yeni nesil bir deneyimdir.
+              Bloom2GO, çiçeği sadece özel gün ürünü olmaktan çıkarır. Günün temposuna uyum sağlayan,
+              kaliteli ve ulaşılabilir bir jest seçeneği sunar.
             </p>
 
             <div className="mt-10 space-y-8">
@@ -71,8 +72,8 @@ const WhyChooseUs = () => {
               viewport={{ once: true }}
               className="rounded-[34px] bg-[#f7931e] p-8 text-[#2a211c] shadow-[0_24px_70px_rgba(247,147,30,0.24)] sm:col-span-2"
             >
-              <p className="text-sm font-semibold uppercase tracking-[0.22em] opacity-80">Akıllı Teknoloji</p>
-              <p className="mt-6 font-serif text-5xl sm:text-6xl">Otomat değil, bir çiçek galerisi</p>
+              <p className="text-sm font-semibold uppercase tracking-[0.22em] opacity-80">Yeni Nesil Alışkanlık</p>
+              <p className="mt-6 font-serif text-5xl sm:text-6xl">Çiçeği ihtiyaç anında ulaşılabilir kılar</p>
             </motion.div>
 
             {stats.map((stat, index) => (
