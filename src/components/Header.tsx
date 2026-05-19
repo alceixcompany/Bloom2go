@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { createPortal } from 'react-dom';
 import { withAssetVersion } from '@/lib/asset';
+import LocationTriggerButton from '@/components/LocationTriggerButton';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -84,12 +85,9 @@ const Header = () => {
           </nav>
 
           <div className="hidden md:block">
-            <Link
-              href="/hizmet-bolgelerimiz"
-              className="inline-flex items-center justify-center rounded-full bg-[#2a211c] px-7 py-3 text-[10px] font-bold uppercase tracking-[0.2em] text-white transition-all duration-300 hover:bg-[#f7931e] active:scale-95 shadow-lg shadow-[#2a211c]/10"
-            >
+            <LocationTriggerButton className="inline-flex items-center justify-center rounded-full bg-[#2a211c] px-7 py-3 text-[10px] font-bold uppercase tracking-[0.2em] text-white transition-all duration-300 hover:bg-[#f7931e] active:scale-95 shadow-lg shadow-[#2a211c]/10">
               Otomat Konumları
-            </Link>
+            </LocationTriggerButton>
           </div>
 
           <button
@@ -152,13 +150,12 @@ const Header = () => {
               <p className="mt-4 font-serif text-2xl leading-tight text-[#2a211c]">
                 Taze çiçeğe hızlı, şık ve güvenli biçimde ulaşın.
               </p>
-              <Link
-                href="/hizmet-bolgelerimiz"
+              <LocationTriggerButton
                 className="mt-8 inline-flex w-full items-center justify-center rounded-2xl bg-[#f7931e] px-6 py-5 text-xs font-bold uppercase tracking-[0.2em] text-white"
-                onClick={() => setIsMenuOpen(false)}
+                onOpen={() => setIsMenuOpen(false)}
               >
                 OTOMAT KONUMLARI
-              </Link>
+              </LocationTriggerButton>
             </div>
           </div>,
           document.body

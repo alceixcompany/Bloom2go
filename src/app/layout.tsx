@@ -5,6 +5,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
+import LocationModal from "@/components/LocationModal";
 import ReduxProvider from "@/components/ReduxProvider";
 
 const inter = Inter({ 
@@ -155,6 +156,7 @@ function RootLayoutContent({ children }: { children: React.ReactNode }) {
       {children}
       <Footer />
       <FloatingContact />
+      <LocationModal />
     </>
   );
 }

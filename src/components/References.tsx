@@ -1,29 +1,31 @@
 'use client'
 
 import React from 'react';
+import Link from 'next/link';
+import { FiArrowUpRight, FiBox, FiMapPin, FiTool } from 'react-icons/fi';
 
 const References = () => {
-  const testimonials = [
+  const offerings = [
     {
-      name: 'Elif K.',
-      title: 'Havalimanı Noktası',
-      comment: 'Uçağa yetişmeden önce birkaç dakikada gerçekten şık bir buket alabildim. Son dakika için büyük rahatlık.',
-      tone: 'bg-[#fffde7]',
-      rotate: '-rotate-2',
+      icon: FiMapPin,
+      title: 'Kendi Bloom2GO Noktalarimiz',
+      description:
+        'Kendi lokasyon agimizda 7/24 cicek satisi yapiyor, merkezi noktalarda son dakika ihtiyacina hizli erisim sagliyoruz.',
+      tone: 'bg-[#fff5ea]',
     },
     {
-      name: 'Mert A.',
-      title: 'AVM Lokasyonu',
-      comment: 'Akşam saati çiçekçi aramak yerine doğrudan otomatı kullandım. Ödeme çok hızlıydı, buket de oldukça tazeydi.',
-      tone: 'bg-[#f1f8e9]',
-      rotate: 'rotate-2',
+      icon: FiBox,
+      title: 'Otomat Satisi',
+      description:
+        'Markalar, AVM yonetimleri ve is ortaklari icin kurulum amacli Bloom2GO cicek otomatlarini da sunuyoruz.',
+      tone: 'bg-[#f7efe7]',
     },
     {
-      name: 'Zeynep T.',
-      title: 'Metro Çıkışı',
-      comment: 'İşten çıkarken spontane bir hediye almak istedim. Konumu kolaydı, seçim yapmak da düşündüğümden çok daha pratikti.',
-      tone: 'bg-[#fce4ec]',
-      rotate: '-rotate-1',
+      icon: FiTool,
+      title: 'Kurulum ve Isletme Destegi',
+      description:
+        'Lokasyon secimi, saha kurgusu, operasyon akisi ve satis sonrasi destek tarafinda sureci birlikte planliyoruz.',
+      tone: 'bg-[#efe6db]',
     },
   ];
 
@@ -32,33 +34,39 @@ const References = () => {
       <div className="mx-auto max-w-7xl px-5 sm:px-7 lg:px-10">
         <div className="text-center">
           <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[var(--lale-emerald-soft)]">
-            Kullananlar Ne Diyor
+            Bloom2GO Modelleri
           </p>
           <h2 className="mt-5 font-serif text-4xl text-[var(--lale-anthracite)] sm:text-5xl">
-            Bloom2GO Deneyimini Yaşayanlardan
+            Sadece satis noktasi degil, otomat cozum ortaginiz
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-[var(--lale-emerald-soft)] sm:text-lg">
-            Çiçeğe hızlı ulaşmak, tazelikten emin olmak ve doğru anda doğru jesti yapmak isteyen kullanıcıların kısa notları.
+            Bloom2GO hem kendi cicek otomat lokasyonlarini isletir hem de ihtiyaca uygun otomat satisi ve kurulum planlamasi sunar.
           </p>
         </div>
 
-        <div className="mt-16 flex flex-wrap justify-center gap-8">
-          {testimonials.map((item) => (
+        <div className="mt-16 grid gap-8 md:grid-cols-3">
+          {offerings.map((item) => (
             <article
-              key={item.name}
-              className={`relative w-full max-w-[340px] ${item.rotate} ${item.tone} p-7 shadow-[0_18px_40px_rgba(36,29,24,0.10)] transition-transform duration-300 hover:rotate-0`}
+              key={item.title}
+              className={`rounded-[32px] ${item.tone} p-7 shadow-[0_18px_40px_rgba(36,29,24,0.10)] transition-transform duration-300 hover:-translate-y-1`}
             >
-              <div className="absolute -top-3 left-1/2 h-7 w-7 -translate-x-1/2 rounded-full bg-[var(--lale-gold)]/30 blur-sm" />
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2 text-[var(--lale-anthracite)]">+</div>
-              <p className="font-serif text-xl leading-8 text-[var(--lale-anthracite)]">"{item.comment}"</p>
-              <div className="mt-8 border-t border-black/10 pt-4">
-                <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--lale-anthracite)]">
-                  {item.name}
-                </p>
-                <p className="mt-2 text-sm text-[var(--lale-emerald-soft)]">{item.title}</p>
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/60 text-[var(--lale-anthracite)]">
+                <item.icon className="h-6 w-6" />
               </div>
+              <h3 className="mt-6 font-serif text-3xl leading-tight text-[var(--lale-anthracite)]">{item.title}</h3>
+              <p className="mt-4 text-sm leading-8 text-[var(--lale-emerald-soft)]">{item.description}</p>
             </article>
           ))}
+        </div>
+
+        <div className="mt-14 flex justify-center">
+          <Link
+            href="/iletisim"
+            className="inline-flex items-center gap-3 rounded-full bg-[var(--lale-anthracite)] px-8 py-4 text-xs font-bold uppercase tracking-[0.18em] text-white transition-colors hover:bg-[#f7931e]"
+          >
+            Otomat Satisi Icin Iletisime Gecin
+            <FiArrowUpRight className="h-4 w-4" />
+          </Link>
         </div>
       </div>
     </section>

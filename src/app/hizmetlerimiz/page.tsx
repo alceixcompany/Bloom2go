@@ -4,16 +4,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { withAssetVersion } from '@/lib/asset';
+import LocationTriggerButton from '@/components/LocationTriggerButton';
 import {
   FiArrowRight,
+  FiBox,
   FiClock,
   FiGrid,
-  FiMapPin,
   FiPackage,
-  FiScissors,
-  FiShoppingBag,
-  FiTruck,
-  FiUsers,
   FiSmartphone,
   FiSun,
 } from 'react-icons/fi';
@@ -24,7 +21,7 @@ const modules = [
     slug: 'otomat-agi',
     title: 'Otomat Ağı',
     image: withAssetVersion('/services/siparis-yonetimi.png'),
-    description: 'Şehrin en prestijli noktalarında 7/24 aktif çiçek galerileri.',
+    description: 'Kendi Bloom2GO lokasyonlarimizda 7/24 aktif cicek otomat deneyimi sunuyoruz.',
     tone: 'dark',
     highlights: ['AVM ve Havalimanı konumları', 'Merkezi konum takibi', 'Yüksek trafik erişimi'],
   },
@@ -60,18 +57,18 @@ const modules = [
     slug: 'tedarik-zinciri',
     title: 'Tedarik Zinciri',
     image: withAssetVersion('/services/siparis-yonetimi.png'),
-    description: 'Otomatlardaki ürünlerin günlük olarak yenilenmesi ve takibi.',
+    description: 'Otomatlardaki urunlerin yenilenmesi, stok akisi ve operasyon takibi tek merkezden yonetilir.',
     tone: 'sand',
     highlights: ['Günlük taze ikmal', 'Akıllı stok tahmini', 'Minimum zayiat oranı'],
   },
   {
-    icon: FiUsers,
+    icon: FiBox,
     slug: 'musteri-deneyimi',
-    title: 'Müşteri Deneyimi',
+    title: 'Otomat Satisi',
     image: withAssetVersion('/services/siparis-yonetimi.png'),
-    description: 'Dokunmatik ekranlar üzerinden interaktif seçim ve bilgi.',
+    description: 'Bloom2GO modelini kendi lokasyonunda kurmak isteyen markalar icin otomat satisi ve kurulum plani sunulur.',
     tone: 'light',
-    highlights: ['Buket detaylı bilgi', 'Özel hediye paketleme', 'Sadakat programları'],
+    highlights: ['Kurulum planlamasi', 'Markaya uygun uygulama', 'Satis sonrasi destek'],
   },
 ] as const;
 
@@ -90,6 +87,11 @@ const workflow = [
     step: '03',
     title: 'Anında Alın',
     description: 'Ödemenizi temassız olarak tamamlayın ve taze çiçeğinize saniyeler içinde ulaşın.',
+  },
+  {
+    step: '04',
+    title: 'Otomat Kurulumu Planlayin',
+    description: 'Kendi lokasyonunuz icin Bloom2GO otomat satisi ve kurulum modelini ekibimizle birlikte sekillendirin.',
   },
 ] as const;
 
@@ -112,20 +114,18 @@ export default function ServicesPage() {
               Bloom2GO Deneyimi
             </p>
             <h1 className="max-w-4xl font-serif text-[clamp(2.6rem,5vw,5.25rem)] leading-[0.96] tracking-[-0.04em] text-[#2a211c]">
-              Taze çiçeklere 7/24 <br /> ulaşmanızı sağlayan teknoloji
+              Kendi lokasyonlarimizda cicek satarken
+              <br /> is ortaklarimiza da otomat kuruyoruz
             </h1>
             <p className="mt-8 max-w-2xl text-lg leading-8 text-[#8a6448] sm:text-xl">
-              Bloom2GO; tazelik, hız ve erişilebilirliği bir araya getirerek çiçeği yalnızca özel günlerde değil,
-              ihtiyaç duyduğunuz her anda ulaşılabilir hale getiriyor.
+              Bloom2GO; kendi otomat aginda 7/24 cicek satisi yaparken ayni zamanda AVM, meydan, havalimani
+              ve kurumsal lokasyonlar icin otomat satisi ve kurulum cozumleri de sunar.
             </p>
 
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-              <Link
-                href="/hizmet-bolgelerimiz"
-                className="inline-flex items-center justify-center rounded-full bg-[#2a211c] px-7 py-3 text-sm font-semibold text-white transition-transform duration-300 hover:-translate-y-0.5 shadow-lg shadow-[#2a211c]/20"
-              >
+              <LocationTriggerButton className="inline-flex items-center justify-center rounded-full bg-[#2a211c] px-7 py-3 text-sm font-semibold text-white transition-transform duration-300 hover:-translate-y-0.5 shadow-lg shadow-[#2a211c]/20">
                 Otomat Konumları
-              </Link>
+              </LocationTriggerButton>
               <Link
                 href="#moduller"
                 className="inline-flex items-center justify-center gap-2 rounded-full border border-[rgba(42,33,28,0.12)] bg-white px-7 py-3 text-sm font-semibold text-[#2a211c] transition-colors duration-300 hover:bg-[#fff4ed]"
@@ -138,15 +138,15 @@ export default function ServicesPage() {
             <div className="mt-12 grid gap-4 sm:grid-cols-3">
               <div className="rounded-[28px] border border-[rgba(42,33,28,0.08)] bg-white/80 px-5 py-5 shadow-[0_12px_40px_rgba(42,33,28,0.05)]">
                 <p className="text-2xl font-semibold text-[#2a211c]">50+</p>
-                <p className="mt-1 text-sm text-[#8a6448]">Aktif otomat noktası</p>
+                <p className="mt-1 text-sm text-[#8a6448]">Planlanan satis ve kurulum modeli</p>
               </div>
               <div className="rounded-[28px] border border-[rgba(42,33,28,0.08)] bg-white/80 px-5 py-5 shadow-[0_12px_40px_rgba(42,33,28,0.05)]">
                 <p className="text-2xl font-semibold text-[#2a211c]">7/24</p>
-                <p className="mt-1 text-sm text-[#8a6448]">Kesintisiz taze erişim</p>
+                <p className="mt-1 text-sm text-[#8a6448]">Kendi lokasyonlarimizda kesintisiz satis</p>
               </div>
               <div className="rounded-[28px] border border-[rgba(42,33,28,0.08)] bg-white/80 px-5 py-5 shadow-[0_12px_40px_rgba(42,33,28,0.05)]">
-                <p className="text-2xl font-semibold text-[#2a211c]">100%</p>
-                <p className="mt-1 text-sm text-[#8a6448]">Tazelik ve kalite garantisi</p>
+                <p className="text-2xl font-semibold text-[#2a211c]">B2B</p>
+                <p className="mt-1 text-sm text-[#8a6448]">Otomat satisi ve kurulum destegi</p>
               </div>
             </div>
           </motion.div>
@@ -214,10 +214,10 @@ export default function ServicesPage() {
                     <FiGrid className="h-8 w-8" />
                   </div>
                   <h3 className="mt-8 max-w-md font-serif text-[clamp(2rem,3vw,3.6rem)] leading-[0.98] tracking-[-0.04em]">
-                    Şehrin her noktasında taze çiçek galerileri
+                    Kendi agimizda aktif cicek satis noktalarini isletiyoruz
                   </h3>
                   <p className="mt-6 max-w-xl text-lg leading-8 text-white/70">
-                    Bloom2GO otomatları, premium tasarım buketleri en çok ihtiyaç duyulan anlarda ve yerlerde müşterilerle buluşturur.
+                    Bloom2GO otomatlari, premium tasarim buketleri en cok ihtiyac duyulan anlarda musterilerle bulusturur.
                   </p>
                 </div>
                 <div className="mt-10 grid gap-4 sm:grid-cols-3">
@@ -300,8 +300,8 @@ export default function ServicesPage() {
             <div>
               <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#f7931e] mb-6">Bloom2GO Deneyimi</p>
               <h2 className="font-serif text-5xl leading-tight mb-8">
-                Taze Çiçeğe Ulaşmak <br />
-                <span className="italic text-[#f7931e]">Artık Çok Kolay</span>
+                Iki ayri model, <br />
+                <span className="italic text-[#f7931e]">tek marka deneyimi</span>
               </h2>
               <div className="space-y-6">
                 {workflow.map((item) => (
@@ -337,7 +337,7 @@ export default function ServicesPage() {
                 Yeni Nesil <br /> Çiçekçiliğe Katılın
               </h2>
               <p className="text-xl mb-12 max-w-2xl mx-auto font-medium text-[#2a211c]/80">
-                Bloom2GO konumları, iş birliği fırsatları ya da hizmet detayları hakkında bilgi almak için bize ulaşın.
+                Kendi lokasyonlarimiz, yeni nokta planlari veya otomat satin alma sureci icin bizimle iletisime gecin.
               </p>
               <div className="flex flex-col sm:flex-row gap-5 justify-center">
                 <Link href="/iletisim" className="bg-[#2a211c] text-white px-12 py-5 rounded-2xl font-bold uppercase tracking-[0.2em] text-xs hover:scale-105 transition-all shadow-xl">

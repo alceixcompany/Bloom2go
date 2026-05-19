@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { FiArrowUpRight, FiClock, FiHeart, FiMapPin, FiShield, FiWind } from 'react-icons/fi';
+import LocationTriggerButton from '@/components/LocationTriggerButton';
 
 const services = [
   {
@@ -57,10 +58,10 @@ const Services = () => {
             </p>
 
             <div className="mt-10 flex flex-wrap gap-4">
-              <Link href="/hizmet-bolgelerimiz" className="lale-gold-button gap-3">
+              <LocationTriggerButton className="lale-gold-button gap-3">
                 Otomat Konumları
                 <FiArrowUpRight className="h-4 w-4" />
-              </Link>
+              </LocationTriggerButton>
               <Link
                 href="/hizmetlerimiz"
                 className="inline-flex items-center justify-center rounded-full border border-[rgba(143,98,64,0.18)] px-7 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-[var(--lale-anthracite)] transition-all duration-300 hover:bg-white/80"

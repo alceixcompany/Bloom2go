@@ -17,11 +17,11 @@ const Contact = () => {
                 Bloom2GO İletişim
               </p>
               <h2 className="mt-5 max-w-[560px] font-serif text-[40px] leading-[0.95] sm:text-[54px] lg:text-[68px]">
-                Size en yakın Bloom2GO noktasını birlikte bulalım
+                Lokasyon, isletme ve otomat satisi icin bizimle iletisime gecin
               </h2>
               <p className="mt-6 max-w-[560px] text-base leading-8 text-[rgba(255,248,242,0.76)] sm:text-lg">
-                Otomat konumları, iş birlikleri ya da hizmet detayları hakkında bilgi almak isterseniz
-                bize ulaşın. Ekibimiz sizi doğru noktaya hızlıca yönlendirsin.
+                Kendi Bloom2GO noktalarimiz, yeni lokasyon planlari ya da otomat satin alma sureci
+                hakkinda bilgi almak isterseniz ekibimiz size en uygun yapilari paylassin.
               </p>
 
               <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -67,7 +67,7 @@ const Contact = () => {
                       Bloom2GO Noktaları
                     </p>
                     <p className="mt-3 max-w-[280px] font-serif text-[30px] leading-[1.05] text-white">
-                      Şehrinizdeki uygun otomat konumlarını birlikte paylaşalım.
+                      Yeni nokta planlari ve otomat kurulum modellerini birlikte degerlendirelim.
                     </p>
                   </div>
                 </div>
@@ -116,7 +116,7 @@ const Contact = () => {
                   </label>
                   <textarea
                     rows={7}
-                    placeholder="Otomat konumları, iş birliği ya da hizmet detayları hakkında mesajınızı yazın"
+                    placeholder="Konum talebi, otomat satin alma, is birligi ya da operasyon detayi hakkinda mesajinizi yazin"
                     className="mt-2 w-full rounded-[22px] border border-[rgba(255,248,242,0.16)] bg-[rgba(255,248,242,0.10)] px-5 py-4 text-sm text-[var(--lale-ivory)] placeholder:text-[rgba(255,248,242,0.52)] focus:border-[var(--lale-gold)] focus:bg-[rgba(255,248,242,0.13)] focus:outline-none resize-none"
                   />
                 </div>

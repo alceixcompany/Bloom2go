@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { withAssetVersion } from '@/lib/asset';
+import LocationTriggerButton from '@/components/LocationTriggerButton';
 
 const Hero = () => {
   const heroHighlights = [
@@ -70,9 +71,9 @@ const Hero = () => {
             </p>
 
             <div className="mt-8 flex w-full flex-col justify-center gap-3 sm:mt-10 sm:w-auto sm:flex-row sm:flex-wrap sm:gap-5">
-              <Link href="/hizmet-bolgelerimiz" className="inline-flex min-h-[52px] items-center justify-center rounded-full bg-[#f7931e] px-6 py-4 text-xs font-bold uppercase tracking-[0.18em] text-white shadow-xl shadow-[#f7931e]/20 transition-all hover:bg-[#f57c00] active:scale-95 sm:px-10 sm:py-5 sm:tracking-[0.2em]">
+              <LocationTriggerButton className="inline-flex min-h-[52px] items-center justify-center rounded-full bg-[#f7931e] px-6 py-4 text-xs font-bold uppercase tracking-[0.18em] text-white shadow-xl shadow-[#f7931e]/20 transition-all hover:bg-[#f57c00] active:scale-95 sm:px-10 sm:py-5 sm:tracking-[0.2em]">
                 OTOMAT KONUMLARI
-              </Link>
+              </LocationTriggerButton>
               <Link
                 href="#neden-biz"
                 className="inline-flex min-h-[52px] items-center justify-center rounded-full border border-[rgba(42,33,28,0.22)] bg-white/65 px-6 py-4 text-xs font-bold uppercase tracking-[0.18em] text-[#2a211c] shadow-sm transition-all duration-300 hover:bg-white sm:px-10 sm:py-5 sm:tracking-[0.2em]"
