@@ -61,15 +61,15 @@ const Footer = () => {
             <ul className="mt-6 space-y-4 text-sm text-[var(--lale-emerald-soft)]">
               <li className="flex items-center justify-center gap-3 md:justify-start">
                 <FiMail className="text-[var(--lale-gold)]" />
-                <span>hello@bloom2go.com</span>
+                <span>info@bloom2go.com</span>
               </li>
               <li className="flex items-center justify-center gap-3 md:justify-start">
                 <FiPhone className="text-[var(--lale-gold)]" />
-                <span>+90 (212) 555 20 20</span>
+                <span>0312 221 02 46</span>
               </li>
               <li className="flex items-center justify-center gap-3 md:justify-start">
                 <FiGlobe className="text-[var(--lale-gold)]" />
-                <span>www.bloom2go.com</span>
+                <span>Bloom2Go Teknoloji AS</span>
               </li>
             </ul>
           </div>

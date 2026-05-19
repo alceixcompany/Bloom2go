@@ -30,7 +30,7 @@ const Contact = () => {
                   <p className="mt-4 text-[10px] font-semibold uppercase tracking-[0.24em] text-[var(--lale-gold)]">
                     Telefon
                   </p>
-                  <p className="mt-3 text-lg text-[rgba(255,248,242,0.88)]">+90 (212) 555 20 20</p>
+                  <p className="mt-3 text-lg text-[rgba(255,248,242,0.88)]">0312 221 02 46</p>
                 </div>
                 <div className="rounded-[24px] border border-white/8 bg-white/5 p-5">
                   <FiClock className="h-5 w-5 text-[var(--lale-gold)]" />
@@ -45,9 +45,11 @@ const Contact = () => {
                     Merkez
                   </p>
                   <p className="mt-3 text-lg leading-8 text-[rgba(255,248,242,0.88)]">
-                    Maslak Teknoloji Ofisleri
+                    Bloom2Go Teknoloji AS
                     <br />
-                    Sarıyer / İstanbul
+                    Mustafa Kemal Mah. Dumlupinar Bulv.
+                    <br />
+                    No: 266 A / 18 Cankaya / Ankara
                   </p>
                 </div>
               </div>
@@ -105,7 +107,7 @@ const Contact = () => {
                   </label>
                   <input
                     type="email"
-                    placeholder="iletisim@bloom2go.com"
+                    placeholder="info@bloom2go.com"
                     className="mt-2 w-full rounded-[22px] border border-[rgba(255,248,242,0.16)] bg-[rgba(255,248,242,0.10)] px-5 py-4 text-sm text-[var(--lale-ivory)] placeholder:text-[rgba(255,248,242,0.52)] focus:border-[var(--lale-gold)] focus:bg-[rgba(255,248,242,0.13)] focus:outline-none"
                   />
                 </div>

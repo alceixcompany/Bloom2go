@@ -258,9 +258,9 @@ const ContactPage = () => {
             <div className="lg:col-span-5 space-y-12">
               <div className="space-y-10">
                 {[
-                  { icon: FiPhone, title: 'Telefon', value: '+90 (212) xxx xx xx', sub: 'Destek Hattı' },
-                  { icon: FiMail, title: 'E-posta', value: 'hello@bloom2go.com', sub: 'Bilgi ve Teklif' },
-                  { icon: FiMapPin, title: 'Merkez', value: 'Levent, İstanbul', sub: 'Teknoloji Ofisimiz' },
+                  { icon: FiPhone, title: 'Telefon', value: '0312 221 02 46', sub: 'Destek Hatti' },
+                  { icon: FiMail, title: 'E-posta', value: 'info@bloom2go.com', sub: 'Bilgi ve Teklif' },
+                  { icon: FiMapPin, title: 'Merkez', value: 'Bloom2Go Teknoloji AS', sub: 'Mustafa Kemal Mah. Dumlupinar Bulv. No: 266 A / 18 Cankaya / Ankara' },
                   { icon: FiClock, title: 'Destek Saatleri', value: '09:00 - 19:00', sub: 'Haftanın her günü' },
                 ].map((item) => (
                   <motion.div 
@@ -284,7 +284,7 @@ const ContactPage = () => {
 
               <div className="overflow-hidden rounded-[40px] border border-[rgba(42,33,28,0.06)] shadow-xl">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3007.8288591873!2d29.0125439!3d41.0772421!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab666270e5b77%3A0xc3f94a1d48c0a876!2sLevent%2C%20Be%C5%9fikta%C5%9F%2F%C4%B0stanbul!5e0!3m2!1str!2str!4v1715783676704!5m2!1str!2str"
+                  src="https://www.google.com/maps?q=Mustafa+Kemal+Mah.+Dumlup%C4%B1nar+Bulv.+No:+266+A+%2F+18+%C3%87ankaya+Ankara&output=embed"
                   width="100%"
                   height="380"
                   style={{ border: 0 }}
